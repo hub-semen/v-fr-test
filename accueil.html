@@ -953,19 +953,19 @@ class Component extends DCLogic {
       mtabs:[["lobby","Accueil","",  "",STEP_ICONS.home],["scan","Scan de cotes","◈","s-how",U("ic-scan")],["sports","Paris sportifs","⬢","s-products",U("ic-sports")],["casino","Jeux","◉","s-products",U("ic-casino")]].map(([k,label,glyph,id,img])=>({
         label,glyph,isImg:!!img,isGlyph:!img,img,iconFilter:dark?"filter:invert(1)":"filter:none",color:s.tab===k?"var(--red)":"var(--txt3)",onClick:()=>this.nav(k,id)})),
       sideMenuGroups:[
-        {h:"Products",items:[
-          {label:"Odds Scanner",icon:U("ic-scan"),iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav("scan","s-how")},
-          {label:"Brokerage",icon:STEP_ICONS.brokerDark,iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav("broker","s-products")},
-          {label:"Private Betting Account",icon:STEP_ICONS.lockDark,iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav("private","s-products")},
-          {label:"Sportsbook",icon:U("ic-sports"),iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav("sports","s-products")},
-          {label:"Games",icon:U("ic-casino"),iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav("casino","s-products")},
+        {h:"Produits",items:[
+          {label:"Comparateur de cotes",icon:U("ic-scan"),iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav("scan","s-how")},
+          {label:"Courtage",icon:STEP_ICONS.brokerDark,iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav("broker","s-products")},
+          {label:"Compte de paris privé",icon:STEP_ICONS.lockDark,iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav("private","s-products")},
+          {label:"Paris sportifs",icon:U("ic-sports"),iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav("sports","s-products")},
+          {label:"Jeux",icon:U("ic-casino"),iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav("casino","s-products")},
           {label:"Promotions",icon:"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%222.8%22%20y%3D%228.6%22%20width%3D%2218.4%22%20height%3D%223.9%22%20rx%3D%221%22%2F%3E%3Cpath%20d%3D%22M4.6%2012.5V19a1.6%201.6%200%200%200%201.6%201.6h11.6a1.6%201.6%200%200%200%201.6-1.6v-6.5%22%2F%3E%3Cpath%20d%3D%22M12%208.6v12%22%2F%3E%3Cpath%20d%3D%22M12%208.6S10.9%203.4%208.4%203.4a2.6%202.6%200%200%200%200%205.2ZM12%208.6s1.1-5.2%203.6-5.2a2.6%202.6%200%200%201%200%205.2Z%22%2F%3E%3C%2Fsvg%3E",iconFilter:dark?"filter:none":"filter:invert(1)",onClick:()=>this.nav("promos","s-features")}]},
-        {h:"Bookmakers",items:["Polymarket","PS3838","SBOBet","SingBet","OrbitX","Asian Bookmakers"].map(label=>({label,icon:"",onClick:()=>this.nav("scan","s-books")}))},
-        {h:"Company",items:[
-          {label:"Payments",icon:"",onClick:()=>this.nav("pay","s-pay")},
-          {label:"About Us",icon:"",onClick:()=>this.nav("scan","s-about")},
-          {label:"Terms and Conditions",icon:"",onClick:()=>{}},
-          {label:"Contact Us",icon:"",onClick:()=>this.setState({menu:false,channels:true,chat:"tab"})},
+        {h:"Bookmakers",items:["Polymarket","PS3838","SBOBet","SingBet","OrbitX","Bookmakers asiatiques"].map(label=>({label,icon:"",onClick:()=>this.nav("scan","s-books")}))},
+        {h:"Entreprise",items:[
+          {label:"Paiements",icon:"",onClick:()=>this.nav("pay","s-pay")},
+          {label:"À propos",icon:"",onClick:()=>this.nav("scan","s-about")},
+          {label:"Conditions générales",icon:"",onClick:()=>{}},
+          {label:"Contact",icon:"",onClick:()=>this.setState({menu:false,channels:true,chat:"tab"})},
           {label:"Blog",icon:"",onClick:()=>{}},
           {label:"FAQ",icon:"",onClick:()=>this.nav("faq","s-faq")}]}],
       hdrMenuOpen: this.state.hdrMenuOpen,
@@ -983,9 +983,9 @@ class Component extends DCLogic {
       openChat:()=>this.setState({chat:"open",channels:false}), closeChat:()=>this.setState({chat:"fab",channels:false}),
       fabBottom:s.view==="mobile"?"72px":"26px", tabBottom:s.view==="mobile"?"78px":"26px",
       chatW:s.view==="mobile"?"330px":"320px",
-      chatMsgs:[{text:"Hi — how can we help?",t:"21:02",align:"start",bg:"var(--panel2)",fg:"var(--txt)"},
-                {text:"Is VOdds a bookmaker or a broker?",t:"21:03",align:"end",bg:"var(--red)",fg:"#fff"},
-                {text:"A broker — we compare prices from every connected sportsbook and route your bet to the best one, all from one balance.",t:"21:03",align:"start",bg:"var(--panel2)",fg:"var(--txt)"}],
+      chatMsgs:[{text:"Bonjour — comment pouvons-nous vous aider ?",t:"21:02",align:"start",bg:"var(--panel2)",fg:"var(--txt)"},
+                {text:"VOdds est-il un bookmaker ou un courtier ?",t:"21:03",align:"end",bg:"var(--red)",fg:"#fff"},
+                {text:"Un courtier — nous comparons les prix de tous les bookmakers connectés et acheminons votre pari vers le meilleur, le tout depuis un seul solde.",t:"21:03",align:"start",bg:"var(--panel2)",fg:"var(--txt)"}],
       isHome:s.page==="home", isRegister:s.page==="register", isLogin:s.page==="login", isPayments:s.page==="payments",
       fullHeader:s.page==="home"||s.page==="payments", regHeader:s.page==="register", logHeader:s.page==="login",
       showMobLogin:s.page!=="login", showMobRegister:s.page!=="register",
@@ -996,11 +996,11 @@ class Component extends DCLogic {
       setDesktop:()=>this.setState({view:"desktop"}), setMobile:()=>this.setState({view:"mobile"}),
       dtBtn:this.tabStyle(s.view==="desktop"), mbBtn:this.tabStyle(s.view==="mobile"),
       tabHome:this.tabStyle(s.page==="home"), tabReg:this.tabStyle(s.page==="register"), tabLog:this.tabStyle(s.page==="login"),
-      navLeft:[["How it works","how","s-how",STEP_ICONS.compare,dark?"filter:none":"filter:invert(1)"],["Why us","why","s-features",STEP_ICONS.target,dark?"filter:none":"filter:invert(1)"]].map(([label,k,id,icon,iconFilter])=>({
+      navLeft:[["Comment ça marche","how","s-how",STEP_ICONS.compare,dark?"filter:none":"filter:invert(1)"],["Pourquoi nous","why","s-features",STEP_ICONS.target,dark?"filter:none":"filter:invert(1)"]].map(([label,k,id,icon,iconFilter])=>({
         label, icon, iconFilter, color:"var(--txt)",
         bg:s.tab===k?"var(--panel3)":"var(--panel2)", bd:s.tab===k?"var(--red)":"var(--line)",
         onClick:()=>this.nav(k,id)})),
-      navRight:[["Payments","pay","s-pay",STEP_ICONS.fund,dark?"filter:none":"filter:invert(1)"]].map(([label,k,id,icon,iconFilter])=>({
+      navRight:[["Paiements","pay","s-pay",STEP_ICONS.fund,dark?"filter:none":"filter:invert(1)"]].map(([label,k,id,icon,iconFilter])=>({
         label, icon, iconFilter, color:"var(--txt)",
         bg:s.tab===k?"var(--panel3)":"var(--panel2)", bd:s.tab===k?"var(--red)":"var(--line)",
         onClick:()=>this.nav(k,id)})),
@@ -1038,7 +1038,7 @@ class Component extends DCLogic {
       showOrderBtn:s.phase==="select"||s.phase==="click",
       btnScale:s.phase==="click"?"scale(.94)":"scale(1)",
       btnBg:s.phase==="click"?"var(--red2)":"var(--red)",
-      placedText:"$"+fx.stake+" on "+fx.sel,
+      placedText:"$"+fx.stake+" sur "+fx.sel,
       cursorTop:s.phase==="sport"?"19px"
         :s.phase==="browse"?(146+fx.targetIdx*37)+"px"
         :s.phase==="popup"?"229px"
