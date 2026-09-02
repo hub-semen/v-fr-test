@@ -1051,12 +1051,12 @@ class Component extends DCLogic {
         :"165px",
       cursorScale:s.phase==="click"?"scale(.75)":"scale(1)",
       cursorOpacity:s.phase==="success"?0:1,
-      flowStatusText:s.phase==="sport"?"Choosing a sport — "+SPORT_NAMES[fx.sport]
-        :s.phase==="browse"?"Browsing "+SPORT_NAMES[fx.sport].toLowerCase()+" fixtures…"
-        :s.phase==="popup"?"Opening order ticket for "+fx.sel
-        :s.phase==="select"?(fx.pick.length>1?"Best prices found — splitting the stake across "+fx.pick.length+" sportsbooks":"Best price found — "+fx.books[fx.pick[0]][0]+" at "+fx.books[fx.pick[0]][1].toFixed(2))
-        :s.phase==="click"?"Placing your order…"
-        :"Order placed successfully",
+      flowStatusText:s.phase==="sport"?"Choix d'un sport — "+SPORT_NAMES[fx.sport]
+        :s.phase==="browse"?"Parcours des rencontres de "+SPORT_NAMES[fx.sport].toLowerCase()+"…"
+        :s.phase==="popup"?"Ouverture du ticket de pari pour "+fx.sel
+        :s.phase==="select"?(fx.pick.length>1?"Meilleurs prix trouvés — répartition de la mise sur "+fx.pick.length+" bookmakers":"Meilleur prix trouvé — "+fx.books[fx.pick[0]][0]+" à "+fx.books[fx.pick[0]][1].toFixed(2))
+        :s.phase==="click"?"Placement de votre pari…"
+        :"Pari placé avec succès",
       books:BOOKS.map(([name,abbr,g],i)=>({name,abbr,grey:g?U(g):"",hasLogo:!!g,noLogo:!g,span:i===0?"1 / -1":"auto",
         href:{"Polymarket":"./polymarket.html","PS3838":"./ps3838.html","SBOBet":"./sbobet.html","SingBet":"./singbet.html","OrbitX":"./orbitx.html"}[name]||"#"})),
       booksAside:BOOKS.filter(([name])=>name!=="OrbitX").map(([name,abbr,g])=>({name,abbr,grey:g?U(g):"",hasLogo:!!g,noLogo:!g})),
