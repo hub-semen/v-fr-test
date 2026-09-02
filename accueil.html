@@ -212,8 +212,8 @@ a:hover{color:var(--red2)}
           </sc-if>
         </div>
         <div data-hdr-divider="" style="width:1px;height:22px;background:#232c36"></div>
-        <a data-login="" href="./" style="display:flex;align-items:center;background:none;border:1px solid #232c36;color:#eef2f6;border-radius:8px;height:32px;padding:0 14px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase">Log in</a>
-        <a data-register="" href="./" style="display:flex;align-items:center;background:#ff2929;color:#fff;border-radius:10px;height:32px;padding:0 16px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase">Register</a>
+        <a data-login="" href="./" style="display:flex;align-items:center;background:none;border:1px solid #232c36;color:#eef2f6;border-radius:8px;height:32px;padding:0 14px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase">Se connecter</a>
+        <a data-register="" href="./" style="display:flex;align-items:center;background:#ff2929;color:#fff;border-radius:10px;height:32px;padding:0 16px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase">S'inscrire</a>
       </div>
     </header>
 
@@ -226,11 +226,11 @@ a:hover{color:var(--red2)}
             <button onClick="{{ hdrToggleMenu }}" style="background:none;border:0;color:#5f6b78;font-size:15px;cursor:pointer">✕</button>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px">
-            <a href="./" style="display:flex;align-items:center;justify-content:center;background:none;border:1px solid #232c36;color:#eef2f6;border-radius:8px;padding:13px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;min-height:46px">Log in</a>
-            <a href="./" style="display:flex;align-items:center;justify-content:center;background:#ff2929;color:#fff;border-radius:10px;padding:13px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;min-height:46px">Register</a>
+            <a href="./" style="display:flex;align-items:center;justify-content:center;background:none;border:1px solid #232c36;color:#eef2f6;border-radius:8px;padding:13px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;min-height:46px">Se connecter</a>
+            <a href="./" style="display:flex;align-items:center;justify-content:center;background:#ff2929;color:#fff;border-radius:10px;padding:13px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;min-height:46px">S'inscrire</a>
           </div>
           <div style="display:grid;gap:6px">
-            <span style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78">LANGUAGE</span>
+            <span style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78">LANGUE</span>
             <button onClick="{{ hdrToggleLang }}" style="display:flex;align-items:center;gap:8px;background:#18222a;border:1px solid #232c36;border-radius:9px;padding:12px;cursor:pointer;color:#eef2f6;font-size:12px;min-height:46px"><span style="font-size:16px">🇬🇧</span><span style="color:#5f6b78">English ▾</span></button>
           </div>
           <sc-if value="{{ hdrLangOpen }}">
@@ -242,7 +242,7 @@ a:hover{color:var(--red2)}
           </sc-if>
 
           <div style="display:grid;gap:5px">
-            <span style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78">Products</span>
+            <span style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78">Produits</span>
             <a href="./comparateur-de-cotes.html" style="display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:9px;background:#18222a;border:1px solid #232c36;min-height:46px"><img src="assets/ic-scan.png" alt="" style="width:19px;height:19px;object-fit:contain;flex:none;opacity:.85;filter:invert(1)"><span style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#eef2f6">Comparateur de cotes</span></a>
             <a href="./courtage.html" style="display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:9px;background:#18222a;border:1px solid #232c36;min-height:46px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h4l3-5h6'/%3E%3Cpath d='M4 12h4l3 5h6'/%3E%3Cpath d='m15 5 2.5 2L15 9M15 19l2.5-2L15 15'/%3E%3C/svg%3E" alt="" style="width:19px;height:19px;object-fit:contain;flex:none;opacity:.85;filter:invert(1)"><span style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#eef2f6">Courtage</span></a>
             <a href="./compte-de-paris-prive.html" style="display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:9px;background:#18222a;border:1px solid #232c36;min-height:46px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='10.5' width='14' height='9' rx='2'/%3E%3Cpath d='M8 10.5V7.8a4 4 0 0 1 8 0v2.7'/%3E%3Ccircle cx='12' cy='15' r='1.1' fill='%23000000' stroke='none'/%3E%3C/svg%3E" alt="" style="width:19px;height:19px;object-fit:contain;flex:none;opacity:.85;filter:invert(1)"><span style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#eef2f6">Compte de paris privé</span></a>
@@ -260,7 +260,7 @@ a:hover{color:var(--red2)}
             <a href="./bookmakers-asiatiques.html" style="display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:9px;background:#18222a;border:1px solid #232c36;min-height:46px"><span style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#eef2f6">Bookmakers asiatiques</span></a>
           </div>
           <div style="display:grid;gap:5px">
-            <span style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78">Company</span>
+            <span style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78">Entreprise</span>
             <a href="./paiements.html" style="display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:9px;background:#18222a;border:1px solid #232c36;min-height:46px"><span style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#eef2f6">Paiements</span></a>
             <a href="./a-propos.html" style="display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:9px;background:#18222a;border:1px solid #232c36;min-height:46px"><span style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#eef2f6">À propos</span></a>
             <a href="./conditions-generales.html" style="display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:9px;background:#18222a;border:1px solid #232c36;min-height:46px"><span style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#eef2f6">Conditions générales</span></a>
@@ -274,7 +274,7 @@ a:hover{color:var(--red2)}
 
     <div data-bottom-spacer="" style="display:none;min-height:66px"></div>
     <nav data-bottom-nav="" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;background:#12161c;border-top:1px solid #232c36;padding:8px 10px;gap:6px">
-      <a href="./comparateur-de-cotes.html" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;flex:1;background:#18222a;border-radius:9px;padding:6px 4px;min-height:48px;color:#eef2f6"><img alt="" style="width:17px;height:17px;object-fit:contain" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='3'/%3E%3Cpath d='M7 9v6M10.5 11v2M14 8.5v7M17.5 11v2'/%3E%3C/svg%3E"><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Odds Scan</span></a>
+      <a href="./comparateur-de-cotes.html" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;flex:1;background:#18222a;border-radius:9px;padding:6px 4px;min-height:48px;color:#eef2f6"><img alt="" style="width:17px;height:17px;object-fit:contain" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='3'/%3E%3Cpath d='M7 9v6M10.5 11v2M14 8.5v7M17.5 11v2'/%3E%3C/svg%3E"><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Cotes</span></a>
       <a href="./paris-sportifs.html" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;flex:1;background:#18222a;border-radius:9px;padding:6px 4px;min-height:48px;color:#eef2f6"><img alt="" style="width:17px;height:17px;object-fit:contain;filter:invert(1)" src="assets/ic-sports.png"><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Sports</span></a>
       <a href="./jeux.html" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;flex:1;background:#18222a;border-radius:9px;padding:6px 4px;min-height:48px;color:#eef2f6"><img alt="" style="width:17px;height:17px;object-fit:contain;filter:invert(1)" src="assets/ic-casino.png"><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Jeux</span></a>
       <a href="./promotions.html" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;flex:1;background:#18222a;border-radius:9px;padding:6px 4px;min-height:48px;color:#eef2f6"><img alt="" style="width:17px;height:17px;object-fit:contain" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2.8' y='8.6' width='18.4' height='3.9' rx='1'/%3E%3Cpath d='M4.6 12.5V19a1.6 1.6 0 0 0 1.6 1.6h11.6a1.6 1.6 0 0 0 1.6-1.6v-6.5'/%3E%3Cpath d='M12 8.6v12'/%3E%3Cpath d='M12 8.6S10.9 3.4 8.4 3.4a2.6 2.6 0 0 1 0 5.2ZM12 8.6s1.1-5.2 3.6-5.2a2.6 2.6 0 0 1 0 5.2Z'/%3E%3C/svg%3E"><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Promo</span></a>
@@ -287,7 +287,7 @@ a:hover{color:var(--red2)}
           <a href="https://wa.me/639178372617" target="_blank" style="display:flex;align-items:center;gap:9px;height:38px;padding:0 14px;border:1px solid #232c36;border-radius:19px;background:#12161c;color:#eef2f6;font-size:11.5px;font-weight:700;box-shadow:0 24px 60px rgba(0,0,0,.6)">WhatsApp</a>
         </div>
       </sc-if>
-      <button aria-label="Live chat" title="Live chat" onClick="{{ hdrToggleChat }}" style="width:56px;height:56px;border-radius:50%;background:none;border:0;padding:0;cursor:pointer;display:grid;place-items:center;box-shadow:0 10px 26px rgba(255,41,41,.4)">
+      <button aria-label="Chat en direct" title="Chat en direct" onClick="{{ hdrToggleChat }}" style="width:56px;height:56px;border-radius:50%;background:none;border:0;padding:0;cursor:pointer;display:grid;place-items:center;box-shadow:0 10px 26px rgba(255,41,41,.4)">
         <img src="assets/ic-livechat-new.svg" alt="" style="width:56px;height:56px;display:block">
       </button>
     </div>
@@ -300,19 +300,19 @@ a:hover{color:var(--red2)}
         <div data-blob="b" style="width:420px;height:420px;background:radial-gradient(circle,var(--up),transparent 70%);opacity:.13;filter:none;bottom:-60px;right:-120px;transform:translateY({{ parY3 }})"></div>
       <section data-sec="" data-hero="" style="padding:52px 40px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;position:relative;max-width:1240px;margin:0 auto">
         <div style="position:relative;z-index:1">
-          <div style="font-family:var(--font-tech);font-size:14px;letter-spacing:.12em;font-weight:800;color:var(--red);text-transform:uppercase;margin-bottom:14px">Compare · pick · bet</div>
-          <h1 data-h1="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 16px;color:var(--txt);max-width:16ch">One board.<br><span style="color:var(--red)">Every price.</span></h1>
-          <p style="font-size:15.5px;line-height:1.6;color:var(--txt2);margin:0 0 24px;max-width:48ch;text-wrap:pretty">VOdds pulls live odds from top sportsbooks and exchanges onto one board. Pick the price you like, place your bet, and we handle the rest — all from a single account.</p>
+          <div style="font-family:var(--font-tech);font-size:14px;letter-spacing:.12em;font-weight:800;color:var(--red);text-transform:uppercase;margin-bottom:14px">Comparez · choisissez · pariez</div>
+          <h1 data-h1="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 16px;color:var(--txt);max-width:16ch">Un seul tableau.<br><span style="color:var(--red)">Tous les prix.</span></h1>
+          <p style="font-size:15.5px;line-height:1.6;color:var(--txt2);margin:0 0 24px;max-width:48ch;text-wrap:pretty">VOdds regroupe les cotes en direct des meilleurs bookmakers et plateformes d'échange sur un seul tableau. Choisissez le prix qui vous convient, placez votre pari, et nous gérons le reste — le tout depuis un seul compte.</p>
           <div data-herocta="" style="display:flex;gap:14px;flex-wrap:wrap">
-            <button onClick="{{ goRegister }}" style="background:var(--red);color:#fff;border:0;border-radius:11px;padding:16px 34px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:var(--font-body);box-shadow:0 0 24px rgba(255,41,41,.45)" style-hover="background:var(--red2);box-shadow:0 0 0 5px rgba(255,41,41,.15),0 0 30px rgba(255,41,41,.55)" style-active="transform:scale(.97)">Register</button>
-            <button onClick="{{ goLogin }}" style="background:none;border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:16px 28px;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:var(--font-body)" style-hover="border-color:var(--txt3)">Log in</button>
+            <button onClick="{{ goRegister }}" style="background:var(--red);color:#fff;border:0;border-radius:11px;padding:16px 34px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:var(--font-body);box-shadow:0 0 24px rgba(255,41,41,.45)" style-hover="background:var(--red2);box-shadow:0 0 0 5px rgba(255,41,41,.15),0 0 30px rgba(255,41,41,.55)" style-active="transform:scale(.97)">S'inscrire</button>
+            <button onClick="{{ goLogin }}" style="background:none;border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:16px 28px;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:var(--font-body)" style-hover="border-color:var(--txt3)">Se connecter</button>
           </div>
         </div>
 
         <div style="width:100%;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;box-shadow:var(--shadow);position:relative;z-index:1">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
-            <div style="font-size:10px;letter-spacing:.11em;font-weight:800;color:var(--txt3);text-transform:uppercase">Live odds board</div>
-            <div style="display:flex;align-items:center;gap:6px;font-family:var(--font-tech);font-size:9px;letter-spacing:.07em;color:var(--up);font-weight:700;text-transform:uppercase"><span style="width:6px;height:6px;border-radius:999px;background:var(--up);display:inline-block;animation:voClickPulse 1.6s ease-out infinite"></span>Live</div>
+            <div style="font-size:10px;letter-spacing:.11em;font-weight:800;color:var(--txt3);text-transform:uppercase">Tableau des cotes en direct</div>
+            <div style="display:flex;align-items:center;gap:6px;font-family:var(--font-tech);font-size:9px;letter-spacing:.07em;color:var(--up);font-weight:700;text-transform:uppercase"><span style="width:6px;height:6px;border-radius:999px;background:var(--up);display:inline-block;animation:voClickPulse 1.6s ease-out infinite"></span>En direct</div>
           </div>
           <div data-feed-wrap="" style="height:380px;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent)">
             <div data-feed="" style="display:grid;gap:9px">
@@ -337,15 +337,15 @@ a:hover{color:var(--red2)}
               </sc-for>
             </div>
           </div>
-          <div style="font-size:9.5px;color:var(--txt3);margin-top:10px;line-height:1.5">Illustrative example. Green means the price just improved, red means it just dropped.</div>
+          <div style="font-size:9.5px;color:var(--txt3);margin-top:10px;line-height:1.5">Exemple illustratif. Le vert signifie que le prix vient de s'améliorer, le rouge qu'il vient de baisser.</div>
         </div>
       </section>
 
       <section data-sec="" style="padding:56px 40px;position:relative" id="s-what">
         <div style="max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1">
-          <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:999px;background:rgba(255,41,41,.12);border:1px solid rgba(255,41,41,.3);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--red);margin-bottom:16px">⚡ No bookmaker jargon, ever</div>
-          <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:32px;letter-spacing:-.005em;margin:0 0 16px">What is VOdds</h2>
-          <p style="font-size:14.5px;line-height:1.7;color:var(--txt2);margin:0">VOdds isn't a bookmaker. We connect to established sportsbooks and exchanges and show you their prices side by side. One login: Odds Scanner, Brokerage, Private Betting Accounts, Sportsbook and Casino.</p>
+          <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:999px;background:rgba(255,41,41,.12);border:1px solid rgba(255,41,41,.3);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--red);margin-bottom:16px">⚡ Jamais de jargon de bookmaker</div>
+          <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:32px;letter-spacing:-.005em;margin:0 0 16px">Qu'est-ce que VOdds</h2>
+          <p style="font-size:14.5px;line-height:1.7;color:var(--txt2);margin:0">VOdds n'est pas un bookmaker. Nous nous connectons à des bookmakers et plateformes d'échange reconnus et affichons leurs prix côte à côte. Une seule connexion : Comparateur de cotes, Courtage, Comptes de paris privés, Paris sportifs et Casino.</p>
         </div>
 
         <div data-whatgrid="" style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;max-width:1100px;margin:30px auto 0;position:relative;z-index:1">
@@ -366,8 +366,8 @@ a:hover{color:var(--red2)}
 
       <section data-sec="" style="padding:44px 40px;background:var(--bg2);border-top:1px solid var(--line2);max-width:1240px;margin:0 auto">
         <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap">
-          <h2 id="s-books" data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:19px;letter-spacing:.01em;margin:0">Connected sportsbooks</h2>
-          <div style="font-family:var(--font-tech);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:600">One balance · best price routing</div>
+          <h2 id="s-books" data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:19px;letter-spacing:.01em;margin:0">Bookmakers connectés</h2>
+          <div style="font-family:var(--font-tech);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:600">Un seul solde · routage au meilleur prix</div>
         </div>
         <div data-grid="books" style="display:flex;gap:12px;flex-wrap:wrap">
           <sc-for list="{{ books }}" as="b" hint-placeholder-count="5">
@@ -387,8 +387,8 @@ a:hover{color:var(--red2)}
       <section data-sec="" style="padding:52px 40px;background:var(--bg);position:relative;overflow:hidden" id="s-how">
         <div data-blob="b" style="width:260px;height:260px;background:var(--best);opacity:.1;top:20%;left:-70px;transform:translateY({{ parY2 }})"></div>
         <div style="max-width:640px;margin:0 auto 30px;text-align:center;position:relative;z-index:1">
-          <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:32px;letter-spacing:-.005em;margin:0 0 10px">How it works</h2>
-          <p style="font-size:13.5px;line-height:1.6;color:var(--txt2);margin:0">The same odds board, live on your laptop or your phone. Here's a walkthrough of scanning odds, picking a price and placing a bet.</p>
+          <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:32px;letter-spacing:-.005em;margin:0 0 10px">Comment ça marche</h2>
+          <p style="font-size:13.5px;line-height:1.6;color:var(--txt2);margin:0">Le même tableau de cotes, en direct sur votre ordinateur ou votre téléphone. Voici comment scanner les cotes, choisir un prix et placer un pari.</p>
         </div>
 
         <div data-devices="" style="display:flex;gap:26px;align-items:flex-end;justify-content:center;margin-bottom:40px;flex-wrap:wrap;position:relative;z-index:1">
@@ -401,13 +401,13 @@ a:hover{color:var(--red2)}
                   </sc-for>
                 </div>
                 <div style="flex:none;padding:8px 12px;background:#1a1c1e;border-bottom:1px solid #2c2f32;display:flex;align-items:center;gap:16px">
-                  <span style="font-size:9.5px;font-weight:700;letter-spacing:.03em;color:#7d858f">FAVOURITE</span>
-                  <span style="font-size:9.5px;font-weight:800;letter-spacing:.03em;color:#fff;border-bottom:2px solid #2f88ff;padding-bottom:6px">LIVE</span>
-                  <span style="font-size:9.5px;font-weight:700;letter-spacing:.03em;color:#7d858f">TODAY</span>
-                  <span style="font-size:9.5px;font-weight:700;letter-spacing:.03em;color:#7d858f">EARLY</span>
+                  <span style="font-size:9.5px;font-weight:700;letter-spacing:.03em;color:#7d858f">FAVORI</span>
+                  <span style="font-size:9.5px;font-weight:800;letter-spacing:.03em;color:#fff;border-bottom:2px solid #2f88ff;padding-bottom:6px">DIRECT</span>
+                  <span style="font-size:9.5px;font-weight:700;letter-spacing:.03em;color:#7d858f">AUJOURD'HUI</span>
+                  <span style="font-size:9.5px;font-weight:700;letter-spacing:.03em;color:#7d858f">À VENIR</span>
                 </div>
                 <div style="flex:none;padding:7px 12px;background:#2b2d30;display:flex;justify-content:space-between">
-                  <span style="font-size:9px;font-weight:800;letter-spacing:.04em;color:#c7cbd0">TIME</span>
+                  <span style="font-size:9px;font-weight:800;letter-spacing:.04em;color:#c7cbd0">HEURE</span>
                   <span style="font-size:9px;font-weight:800;letter-spacing:.04em;color:#c7cbd0">MATCH</span>
                 </div>
                 <div style="flex:none;padding:7px 12px;display:flex;align-items:center;gap:9px">
@@ -429,7 +429,7 @@ a:hover{color:var(--red2)}
                   <sc-if value="{{ showTicket }}">
                     <div style="--up:#2f88ff;border-radius:9px;overflow:hidden;background:#26282b;border:1px solid #34373b;margin-top:2px">
                       <div style="background:linear-gradient(135deg,#e64256,#c8283c);padding:9px 12px;display:flex;align-items:center;justify-content:space-between">
-                        <span style="font-family:var(--font-body);font-weight:800;font-size:12.5px;color:#fff">Order Ticket</span>
+                        <span style="font-family:var(--font-body);font-weight:800;font-size:12.5px;color:#fff">Ticket de pari</span>
                         <span style="font-size:12px;color:rgba(255,255,255,.85);font-weight:700">×</span>
                       </div>
                       <div style="padding:9px 12px 3px;display:flex;align-items:baseline;justify-content:space-between">
@@ -449,7 +449,7 @@ a:hover{color:var(--red2)}
                         </sc-for>
                       </div>
                       <sc-if value="{{ showOrderBtn }}">
-                        <div style="margin:0 12px 12px;height:28px;border-radius:6px;background:#2f88ff;transform:{{ btnScale }};transition:transform .15s ease;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#fff">Place order</div>
+                        <div style="margin:0 12px 12px;height:28px;border-radius:6px;background:#2f88ff;transform:{{ btnScale }};transition:transform .15s ease;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#fff">Valider le pari</div>
                       </sc-if>
                     </div>
                   </sc-if>
@@ -457,7 +457,7 @@ a:hover{color:var(--red2)}
                     <div style="position:absolute;inset:0;background:rgba(4,6,9,.6);display:grid;place-items:center;border-radius:8px;z-index:15">
                       <div style="background:#26282b;border:1px solid var(--up);border-radius:14px;padding:22px 28px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.5);max-width:250px">
                         <div style="width:42px;height:42px;border-radius:50%;background:var(--up);display:grid;place-items:center;margin:0 auto 12px"><span style="font-size:19px;font-weight:900;color:#04210b">✓</span></div>
-                        <div style="font-size:13px;font-weight:800;color:#e8eaed;margin-bottom:4px">Order placed</div>
+                        <div style="font-size:13px;font-weight:800;color:#e8eaed;margin-bottom:4px">Pari placé</div>
                         <div style="font-size:11px;color:#a7adb5">{{ placedText }}</div>
                       </div>
                     </div>
@@ -481,7 +481,7 @@ a:hover{color:var(--red2)}
                     <div style="display:flex;align-items:center;gap:3px;padding:4px 6px 6px;background:{{ spm.bg }};border-top:2px solid {{ spm.bd }};font-size:7.5px;font-weight:700;color:{{ spm.fg }}"><img src="{{ spm.icon }}" alt="" style="width:9px;height:9px;object-fit:contain;flex:none">{{ spm.label }}</div>
                   </sc-for>
                 </div>
-                <div style="flex:none;padding:6px 9px;background:#2b2d30;font-size:7.5px;font-weight:800;letter-spacing:.03em;color:#c7cbd0">LIVE MATCHES</div>
+                <div style="flex:none;padding:6px 9px;background:#2b2d30;font-size:7.5px;font-weight:800;letter-spacing:.03em;color:#c7cbd0">MATCHS EN DIRECT</div>
                 <div style="padding:8px;flex:1;position:relative">
                 <sc-if value="{{ showBrowse }}" hint-placeholder-val="{{ true }}">
                   <div style="display:grid">
@@ -495,7 +495,7 @@ a:hover{color:var(--red2)}
                 </sc-if>
                 <sc-if value="{{ showTicket }}">
                   <div style="--up:#2f88ff;border-radius:8px;overflow:hidden;background:#26282b;border:1px solid #34373b">
-                    <div style="background:linear-gradient(135deg,#e64256,#c8283c);padding:6px 8px;font-family:var(--font-body);font-weight:800;font-size:9px;color:#fff">Order Ticket</div>
+                    <div style="background:linear-gradient(135deg,#e64256,#c8283c);padding:6px 8px;font-family:var(--font-body);font-weight:800;font-size:9px;color:#fff">Ticket de pari</div>
                     <div style="padding:6px 8px 3px;font-size:8px;color:var(--red);font-weight:700">{{ popupSel }}</div>
                     <div style="padding:0 8px 8px;display:grid;gap:4px">
                       <sc-for list="{{ bookRows }}" as="br2" hint-placeholder-count="4">
@@ -511,7 +511,7 @@ a:hover{color:var(--red2)}
                   <div style="position:absolute;inset:0;background:rgba(4,6,9,.6);display:grid;place-items:center;border-radius:18px">
                     <div style="background:var(--panel);border:1px solid var(--up);border-radius:12px;padding:14px 16px;text-align:center;max-width:130px">
                       <div style="width:28px;height:28px;border-radius:50%;background:var(--up);display:grid;place-items:center;margin:0 auto 8px"><span style="font-size:13px;font-weight:900;color:#04210b">✓</span></div>
-                      <div style="font-size:9.5px;font-weight:800;color:var(--txt)">Order placed</div>
+                      <div style="font-size:9.5px;font-weight:800;color:var(--txt)">Pari placé</div>
                     </div>
                   </div>
                 </sc-if>
@@ -528,7 +528,7 @@ a:hover{color:var(--red2)}
                 <div style="position:absolute;top:-8px;left:-6px;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(6px)"></div>
                 <img src="{{ s.icon }}" alt="" style="width:20px;height:20px;object-fit:contain;position:relative;z-index:1">
               </div>
-              <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10px;font-weight:700;color:var(--red);letter-spacing:.08em;margin-bottom:5px">STEP {{ s.n }}</div>
+              <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10px;font-weight:700;color:var(--red);letter-spacing:.08em;margin-bottom:5px">ÉTAPE {{ s.n }}</div>
               <div style="font-size:14px;font-weight:800;color:var(--txt);margin-bottom:5px">{{ s.t }}</div>
               <div style="font-size:12px;line-height:1.5;color:var(--txt2)">{{ s.d }}</div>
             </div>
@@ -538,8 +538,8 @@ a:hover{color:var(--red2)}
 
       <section data-sec="" style="padding:48px 40px;background:var(--bg2);border-top:1px solid var(--line2)" id="s-pay">
         <div style="max-width:1160px;margin:0 auto"><div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:22px">
-          <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:19px;letter-spacing:.01em;margin:0;color:var(--txt)">Funding</h2>
-          <div style="display:flex;align-items:center;gap:14px"><div style="font-family:var(--font-tech);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:600">USD · EUR · GBP · CNY</div></div><button style="background:var(--orange);color:#241000;border:0;border-radius:9px;padding:9px 15px;font-size:11px;font-weight:800;letter-spacing:.07em;cursor:pointer;font-family:var(--font-body)" onClick="{{ goRegister }}">DEPOSIT</button></div>
+          <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:19px;letter-spacing:.01em;margin:0;color:var(--txt)">Financement</h2>
+          <div style="display:flex;align-items:center;gap:14px"><div style="font-family:var(--font-tech);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:600">USD · EUR · GBP · CNY</div></div><button style="background:var(--orange);color:#241000;border:0;border-radius:9px;padding:9px 15px;font-size:11px;font-weight:800;letter-spacing:.07em;cursor:pointer;font-family:var(--font-body)" onClick="{{ goRegister }}">DÉPOSER</button></div>
         </div>
         <div data-marquee-wrap="" style="overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);margin-bottom:14px">
           <div data-marquee="" style="display:flex;gap:10px;width:max-content">
@@ -551,14 +551,14 @@ a:hover{color:var(--red2)}
             </sc-for>
           </div>
         </div>
-        <div style="max-width:1160px;margin:0 auto"><a href="./paiements.html" style="background:none;border:0;color:var(--red);font-size:12.5px;font-weight:700;letter-spacing:.03em;cursor:pointer;font-family:var(--font-body);padding:0;text-decoration:none" style-hover="color:var(--red2)">See all payment methods →</a></div>
+        <div style="max-width:1160px;margin:0 auto"><a href="./paiements.html" style="background:none;border:0;color:var(--red);font-size:12.5px;font-weight:700;letter-spacing:.03em;cursor:pointer;font-family:var(--font-body);padding:0;text-decoration:none" style-hover="color:var(--red2)">Voir tous les moyens de paiement →</a></div>
       </section>
 
       <section data-sec="" style="padding:52px 40px;background:var(--bg2);border-top:1px solid var(--line2);position:relative;overflow:hidden" id="s-features">
         <div data-blob="a" style="width:240px;height:240px;background:var(--red);opacity:.1;top:-40px;left:-60px;transform:translateY({{ parY1 }})"></div>
         <div style="max-width:640px;margin:0 auto 26px;text-align:center;position:relative;z-index:1">
-          <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:32px;letter-spacing:-.005em;margin:0 0 10px">Why bettors use VOdds</h2>
-          <p style="font-size:13.5px;line-height:1.6;color:var(--txt2);margin:0">Checking odds one sportsbook at a time wastes time and money. Here's what changes when they're all in one place.</p>
+          <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:32px;letter-spacing:-.005em;margin:0 0 10px">Pourquoi les parieurs choisissent VOdds</h2>
+          <p style="font-size:13.5px;line-height:1.6;color:var(--txt2);margin:0">Vérifier les cotes sur chaque bookmaker séparément fait perdre du temps et de l'argent. Voici ce qui change quand tout est regroupé au même endroit.</p>
         </div>
         <div data-bento="" ref="{{ bentoRef }}" style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;max-width:840px;margin:0 auto 44px;position:relative;z-index:1">
           <sc-for list="{{ features }}" as="fe" hint-placeholder-count="5">
@@ -577,12 +577,12 @@ a:hover{color:var(--red2)}
 
         <div style="max-width:760px;margin:0 auto;position:relative;z-index:1">
           <div style="text-align:center;margin-bottom:22px">
-            <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:999px;background:var(--panel3);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--txt2)">No separate provider accounts to request</div>
+            <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:999px;background:var(--panel3);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--txt2)">Aucun compte à demander séparément auprès de chaque bookmaker</div>
           </div>
           <div style="border-radius:16px;background:var(--panel);border:1px solid var(--line);overflow:hidden">
             <div data-compare="" style="display:grid;grid-template-columns:1fr 1fr">
               <div style="padding:22px 24px 24px;border-right:1px solid var(--line)">
-                <div style="font-size:10px;letter-spacing:.1em;font-weight:800;color:var(--txt3);text-transform:uppercase;margin-bottom:14px">😩 The usual way</div>
+                <div style="font-size:10px;letter-spacing:.1em;font-weight:800;color:var(--txt3);text-transform:uppercase;margin-bottom:14px">😩 La méthode habituelle</div>
                 <div style="display:grid;gap:11px">
                   <sc-for list="{{ usualWay }}" as="u" hint-placeholder-count="4">
                     <div style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;background:var(--panel3);color:var(--txt3);font-size:10px;font-weight:800;display:grid;place-items:center;flex:none">✕</span><span style="font-size:12.5px;color:var(--txt2)">{{ u }}</span></div>
@@ -590,7 +590,7 @@ a:hover{color:var(--red2)}
                 </div>
               </div>
               <div style="padding:22px 24px 24px;background:rgba(31,239,26,.06)">
-                <div style="font-size:10px;letter-spacing:.1em;font-weight:800;color:var(--up);text-transform:uppercase;margin-bottom:14px">🙌 The VOdds way</div>
+                <div style="font-size:10px;letter-spacing:.1em;font-weight:800;color:var(--up);text-transform:uppercase;margin-bottom:14px">🙌 La méthode VOdds</div>
                 <div style="display:grid;gap:11px">
                   <sc-for list="{{ voddsWay }}" as="v" hint-placeholder-count="3">
                     <div style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;background:var(--up);color:#04210b;font-size:10px;font-weight:900;display:grid;place-items:center;flex:none">✓</span><span style="font-size:12.5px;font-weight:700;color:var(--txt)">{{ v }}</span></div>
@@ -606,12 +606,12 @@ a:hover{color:var(--red2)}
       <section data-sec="" style="padding:44px 40px;background:var(--bg);border-top:1px solid var(--line2)" id="s-video">
         <div style="max-width:720px;margin:0 auto">
           <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:20px">
-            <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:19px;letter-spacing:.01em;margin:0;color:var(--txt)">See VOdds in action</h2>
-            <div style="font-family:var(--font-tech);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:600">A short walkthrough of comparing odds, picking a price, and placing a bet</div>
+            <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:19px;letter-spacing:.01em;margin:0;color:var(--txt)">Découvrez VOdds en action</h2>
+            <div style="font-family:var(--font-tech);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:600">Une courte démonstration pour comparer les cotes, choisir un prix et placer un pari</div>
           </div>
           <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(135deg,#1a1e24,#0d1117);border:1px solid var(--line);display:grid;place-items:center;position:relative;cursor:pointer" style-hover="border-color:var(--red)">
             <div style="width:64px;height:64px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 10px 26px rgba(255,41,41,.35)"><div style="width:0;height:0;border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent #fff;margin-left:3px"></div></div>
-            <div style="position:absolute;bottom:14px;left:16px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--txt3)">Video placeholder · what is VOdds</div>
+            <div style="position:absolute;bottom:14px;left:16px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--txt3)">Aperçu vidéo · qu'est-ce que VOdds</div>
           </div>
         </div>
       </section>
@@ -620,8 +620,8 @@ a:hover{color:var(--red2)}
         <div data-blob="a" style="width:260px;height:260px;background:var(--best);opacity:.12;top:-50px;right:-70px;transform:translateY({{ parY1 }})"></div>
         <div data-blob="b" style="width:220px;height:220px;background:var(--up);opacity:.12;bottom:-40px;left:6%;transform:translateY({{ parY3 }})"></div>
         <div style="max-width:640px;margin:0 auto 30px;text-align:center;position:relative;z-index:1">
-          <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:32px;letter-spacing:-.005em;margin:0 0 10px">What bettors say</h2>
-          <p style="font-size:13.5px;line-height:1.6;color:var(--txt2);margin:0">Real feedback, real balances.</p>
+          <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:32px;letter-spacing:-.005em;margin:0 0 10px">Ce que disent les parieurs</h2>
+          <p style="font-size:13.5px;line-height:1.6;color:var(--txt2);margin:0">De vrais avis, de vrais soldes.</p>
         </div>
         <div data-testigrid="" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative;z-index:1;max-width:1160px;margin:0 auto">
           <sc-for list="{{ testimonials }}" as="tm" hint-placeholder-count="3">
@@ -654,8 +654,8 @@ a:hover{color:var(--red2)}
       </section>
 
       <section data-sec="" style="padding:36px 40px;background:var(--bg);max-width:1240px;margin:0 auto" id="s-about">
-        <h3 style="font-family:var(--font-body);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);margin:0 0 12px">SEO Block</h3>
-        <p style="font-size:12px;line-height:1.75;color:var(--txt3);margin:0;max-width:100ch">VOdds is an online betting broker and odds comparison platform for sports bettors who want better prices without more paperwork. Instead of operating as a single bookmaker, VOdds connects to established sportsbooks and exchanges — including Polymarket, PS3838, SBOBet, SingBet and OrbitX — and shows their prices side by side, in one place. Register once, fund your account with cards or crypto such as Bitcoin, Ethereum, USDT and USDC, and place bets across every connected provider without opening a separate account anywhere else. VOdds compares odds on football, basketball, tennis and other major sports, then routes your stake to whichever connected sportsbook is offering the best price at that moment, splitting larger stakes across providers when needed. The platform is operated by Ole Group International B.V., licensed in Curaçao under the Gaming Control Board (OGL/2024/1358/1233). Whether you are new to sports betting or comparing odds for the first time, VOdds is built to make finding a good price simple, fast and transparent.</p>
+        <h3 style="font-family:var(--font-body);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);margin:0 0 12px">Bloc SEO</h3>
+        <p style="font-size:12px;line-height:1.75;color:var(--txt3);margin:0;max-width:100ch">VOdds est un courtier en paris et une plateforme de comparaison de cotes en ligne pour les parieurs sportifs qui veulent de meilleurs prix sans démarches supplémentaires. Plutôt que d'agir comme un bookmaker unique, VOdds se connecte à des bookmakers et plateformes d'échange reconnus — dont Polymarket, PS3838, SBOBet, SingBet et OrbitX — et affiche leurs prix côte à côte, en un seul endroit. Inscrivez-vous une fois, alimentez votre compte par carte ou en crypto comme le Bitcoin, l'Ethereum, l'USDT et l'USDC, et placez des paris auprès de chaque fournisseur connecté sans jamais ouvrir de compte séparé ailleurs. VOdds compare les cotes de football, basketball, tennis et d'autres sports majeurs, puis achemine votre mise vers le bookmaker connecté proposant le meilleur prix à cet instant, en répartissant les mises plus importantes entre plusieurs fournisseurs si nécessaire. La plateforme est exploitée par Ole Group International B.V., licenciée à Curaçao sous l'autorité du Gaming Control Board (OGL/2024/1358/1233). Que vous débutiez dans les paris sportifs ou que vous compariez des cotes pour la première fois, VOdds est conçu pour rendre la recherche d'un bon prix simple, rapide et transparente.</p>
       </section>
 
       
@@ -664,7 +664,7 @@ a:hover{color:var(--red2)}
   <footer id="vof" style="padding:38px 40px 30px;background:#07090c;border-top:1px solid #232c36">
     <div data-cols="" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:26px;max-width:1160px;margin-left:auto;margin-right:auto">
       <div>
-        <div style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78;text-transform:uppercase;margin-bottom:11px">Products</div>
+        <div style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78;text-transform:uppercase;margin-bottom:11px">Produits</div>
         <div style="display:grid;gap:7px">
           <a href="./comparateur-de-cotes.html" style="font-size:12px;color:#9aa7b4">Comparateur de cotes</a>
           <a href="./courtage.html" style="font-size:12px;color:#9aa7b4">Courtage</a>
@@ -686,7 +686,7 @@ a:hover{color:var(--red2)}
         </div>
       </div>
       <div>
-        <div style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78;text-transform:uppercase;margin-bottom:11px">Company</div>
+        <div style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78;text-transform:uppercase;margin-bottom:11px">Entreprise</div>
         <div style="display:grid;gap:7px">
           <a href="./a-propos.html" style="font-size:12px;color:#9aa7b4">À propos</a>
           <a href="./conditions-generales.html" style="font-size:12px;color:#9aa7b4">Conditions générales</a>
@@ -701,13 +701,13 @@ a:hover{color:var(--red2)}
     <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;max-width:1160px;margin:0 auto;padding:14px 0;border-top:1px solid #1a222b;border-bottom:1px solid #1a222b;margin-bottom:16px">
       <span style="padding:6px 12px;border-radius:999px;border:1px solid #232c36;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#9aa7b4">Curaçao GCB · OGL/2024/1358/1233</span>
       <span style="padding:6px 12px;border-radius:999px;border:1px solid #232c36;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#9aa7b4">18+</span>
-      <span style="padding:6px 12px;border-radius:999px;border:1px solid #232c36;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#9aa7b4">Live chat</span>
+      <span style="padding:6px 12px;border-radius:999px;border:1px solid #232c36;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#9aa7b4">Chat en direct</span>
       <span style="padding:6px 12px;border-radius:999px;border:1px solid #232c36;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#9aa7b4">Telegram</span>
       <span style="padding:6px 12px;border-radius:999px;border:1px solid #232c36;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#9aa7b4">WhatsApp</span>
     </div>
 
     <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap;max-width:1160px;margin:0 auto 18px">
-      <span style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78;text-transform:uppercase">Payment systems</span>
+      <span style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78;text-transform:uppercase">Moyens de paiement</span>
       <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
         <img src="assets/logos/pay-vm-g.png" alt="Visa/Mastercard" style="height:20px;width:auto;object-fit:contain;filter:opacity(.62)">
         <img src="assets/logos/pay-btc-g.png" alt="Bitcoin" style="height:20px;width:auto;object-fit:contain;filter:opacity(.62)">
@@ -715,7 +715,7 @@ a:hover{color:var(--red2)}
         <img src="assets/logos/pay-usdt-g.png" alt="USDT" style="height:20px;width:auto;object-fit:contain;filter:opacity(.62)">
         <img src="assets/logos/pay-usdc-g.png" alt="USDC" style="height:20px;width:auto;object-fit:contain;filter:opacity(.62)">
         <img src="assets/logos/pay-trx-g.png" alt="TRON" style="height:20px;width:auto;object-fit:contain;filter:opacity(.62)">
-        <img src="assets/logos/pay-bw-g.png" alt="Bank wire" style="height:20px;width:auto;object-fit:contain;filter:opacity(.62)">
+        <img src="assets/logos/pay-bw-g.png" alt="Virement bancaire" style="height:20px;width:auto;object-fit:contain;filter:opacity(.62)">
         <img src="assets/logos/pay-jet-g.png" alt="Jetonbank" style="height:20px;width:auto;object-fit:contain;filter:opacity(.62)">
         <img src="assets/logos/pay-payz-g.png" alt="Payz" style="height:20px;width:auto;object-fit:contain;filter:opacity(.62)">
         <img src="assets/logos/pay-skr-g.png" alt="Skrill" style="height:20px;width:auto;object-fit:contain;filter:opacity(.62)">
@@ -724,7 +724,7 @@ a:hover{color:var(--red2)}
     </div>
 
     <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap;max-width:1160px;margin:0 auto 18px">
-      <span style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78;text-transform:uppercase">Follow us</span>
+      <span style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78;text-transform:uppercase">Suivez-nous</span>
       <div style="display:flex;align-items:center;gap:12px">
         <a href="https://t.me/+eCAiWVjY78w5ZWNl" aria-label="Telegram" title="Telegram" style="width:34px;height:34px;border-radius:12px;background:#18222a;display:grid;place-items:center">
           <svg width="19" height="19" viewBox="0 0 20 20" style="opacity:.62"><path fill="#9aa7b4" d="M18.4 2.3 1.6 8.8c-1.1.5-1.1 1.1-.2 1.3l4.3 1.3 1.6 5c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2-2 4.2 3.1c.8.4 1.3.2 1.5-.7l2.8-13c.3-1.1-.4-1.6-1.1-1.3zM7.6 12.3l8.8-5.6c.4-.3.8-.1.5.2l-7.3 6.6c-.3.2-.4.4-.4.8l-.3 2.5-1.3-4.5z"></path></svg>
@@ -738,7 +738,7 @@ a:hover{color:var(--red2)}
       </div>
     </div>
 
-    <div style="font-size:11px;line-height:1.7;color:#5f6b78;max-width:1160px;margin:0 auto">Ole Group International B.V., company 150383, registered in Curaçao and licensed by the Gaming Control Board under OGL/2024/1358/1233. Not available in the United States, Singapore, Vietnam or the Philippines.</div>
+    <div style="font-size:11px;line-height:1.7;color:#5f6b78;max-width:1160px;margin:0 auto">Ole Group International B.V., société 150383, enregistrée à Curaçao et licenciée par le Gaming Control Board sous le numéro OGL/2024/1358/1233. Non disponible aux États-Unis, à Singapour, au Vietnam ou aux Philippines.</div>
   </footer>
 </div>
 
