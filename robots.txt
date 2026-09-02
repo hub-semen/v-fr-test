@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.vodds.com/sitemap.xml
+Sitemap: https://hub-semen.github.io/v-fr-test/sitemap.xml
