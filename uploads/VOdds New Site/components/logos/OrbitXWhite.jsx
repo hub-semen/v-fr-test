@@ -1,0 +1,97 @@
+// figma node: 15957:16398 OrbitX White
+export function OrbitXWhite(_p = {}) {
+  const props = _p;
+  return (
+    <div className={props.className} style={{
+      width: 61,
+      height: 15.071,
+      overflow: "hidden",
+      position: "relative",
+      color: "rgb(255,255,255)",
+      ...props.style,
+    }}>
+      <div style={{
+        position: "absolute",
+        left: 0,
+        top: 3.11,
+        width: 50,
+        height: 9.168,
+        overflow: "hidden",
+      }}>
+        <svg width={9.211} height={9.168} viewBox="0 0 9.211 9.168" fill="none" style={{
+          position: "absolute",
+          left: 0,
+          top: 0,
+          width: 9.211,
+          height: 9.168,
+        }}>
+          <path d={"M 4.606 9.168 C 3.695 9.168 2.804 8.899 2.047 8.395 C 1.289 7.891 0.699 7.175 0.351 6.338 C 0.002 5.5 -0.089 4.579 0.088 3.69 C 0.266 2.8 0.705 1.984 1.349 1.343 C 1.993 0.702 2.814 0.265 3.707 0.088 C 4.601 -0.089 5.527 0.002 6.368 0.349 C 7.21 0.696 7.929 1.283 8.435 2.037 C 8.941 2.791 9.211 3.677 9.211 4.584 C 9.21 5.799 8.724 6.964 7.861 7.823 C 6.997 8.683 5.827 9.166 4.606 9.168 Z M 4.606 1.593 C 4.012 1.593 3.431 1.768 2.937 2.097 C 2.443 2.425 2.058 2.892 1.831 3.438 C 1.604 3.984 1.544 4.585 1.66 5.165 C 1.776 5.745 2.062 6.278 2.482 6.696 C 2.902 7.114 3.437 7.399 4.02 7.514 C 4.602 7.629 5.206 7.57 5.755 7.344 C 6.304 7.118 6.773 6.734 7.103 6.243 C 7.433 5.751 7.609 5.173 7.609 4.582 C 7.608 3.79 7.291 3.03 6.728 2.47 C 6.165 1.91 5.402 1.595 4.606 1.595 L 4.606 1.593 Z"} fill="currentColor" fillRule="nonzero" />
+        </svg>
+        <svg width={7.957} height={9.159} viewBox="0 0 7.957 9.159" fill="none" style={{
+          position: "absolute",
+          left: 10.046,
+          top: 0,
+          width: 7.957,
+          height: 9.159,
+        }}>
+          <path d={"M 5.781 6.241 L 5.844 6.23 C 6.575 6.107 7.957 5.301 7.957 3.137 C 7.957 0.995 6.362 0.156 5.519 0.011 L 0 0 L 0 9.147 L 1.602 9.147 L 1.602 1.595 L 5.295 1.595 C 5.566 1.665 6.354 1.97 6.354 3.137 C 6.354 4.303 5.808 4.581 5.606 4.648 L 3.363 4.664 L 1.783 6.272 L 3.753 6.257 L 5.824 9.135 L 7.812 9.159 L 5.713 6.241 L 5.781 6.241 Z"} fill="currentColor" fillRule="nonzero" />
+        </svg>
+        <svg width={7.451} height={9.145} viewBox="0 0 7.451 9.145" fill="none" style={{
+          position: "absolute",
+          left: 18.839,
+          top: 0.013,
+          width: 7.451,
+          height: 9.145,
+        }}>
+          <path d={"M 6.084 4.089 C 6.335 3.673 6.468 3.197 6.468 2.711 C 6.468 1.214 5.226 0 3.701 0 L 0 0 L 0 9.145 L 4.683 9.145 C 6.209 9.145 7.451 7.928 7.451 6.434 C 7.45 5.958 7.323 5.491 7.083 5.08 C 6.843 4.668 6.498 4.326 6.084 4.089 Z M 4.683 7.57 L 1.602 7.57 L 1.602 1.57 L 3.7 1.57 C 4.004 1.565 4.298 1.681 4.516 1.892 C 4.734 2.103 4.859 2.391 4.864 2.694 C 4.869 2.996 4.752 3.288 4.54 3.506 C 4.329 3.723 4.039 3.847 3.735 3.852 L 3.285 3.852 L 1.785 5.442 C 2.842 5.442 3.652 5.407 4.207 5.379 C 4.711 5.352 5.168 5.32 5.505 5.623 C 5.614 5.727 5.701 5.852 5.759 5.991 C 5.817 6.13 5.846 6.279 5.843 6.43 C 5.84 6.734 5.717 7.024 5.499 7.238 C 5.282 7.451 4.988 7.571 4.683 7.57 L 4.683 7.57 Z"} fill="currentColor" fillRule="nonzero" />
+        </svg>
+        <svg width={1.580} height={9.136} viewBox="0 0 1.580 9.136" fill="none" style={{
+          position: "absolute",
+          left: 27.13,
+          top: 0.011,
+          width: 1.58,
+          height: 9.136,
+        }}>
+          <path d={"M 1.58 0 L 0 0 L 0 9.136 L 1.58 9.136 L 1.58 0 Z"} fill="currentColor" fillRule="nonzero" />
+        </svg>
+        <svg width={6.846} height={9.136} viewBox="0 0 6.846 9.136" fill="none" style={{
+          position: "absolute",
+          left: 29.664,
+          top: 0.011,
+          width: 6.846,
+          height: 9.136,
+        }}>
+          <path d={"M 6.846 0 L 0 0 L 0 1.572 L 2.633 1.572 L 2.633 9.136 L 4.213 9.136 L 4.213 1.572 L 6.846 1.572 L 6.846 0 Z"} fill="currentColor" fillRule="nonzero" />
+        </svg>
+        <svg width={5.676} height={4.028} viewBox="0 0 5.676 4.028" fill="none" style={{
+          position: "absolute",
+          left: 37.49,
+          top: 0,
+          width: 5.676,
+          height: 4.028,
+        }}>
+          <path d={"M 3.945 4.028 L 0 0 L 3.38 0 L 5.676 2.369 L 3.945 4.028 Z"} fill="currentColor" fillRule="nonzero" />
+        </svg>
+        <svg width={5.661} height={3.955} viewBox="0 0 5.661 3.955" fill="none" style={{
+          position: "absolute",
+          left: 37.515,
+          top: 5.191,
+          width: 5.661,
+          height: 3.955,
+        }}>
+          <path d={"M 3.381 3.955 L 0 3.955 L 3.965 0 L 5.661 1.694 L 3.381 3.955 Z"} fill="currentColor" fillRule="nonzero" />
+        </svg>
+        <svg width={7.909} height={9.147} viewBox="0 0 7.909 9.147" fill="none" style={{
+          position: "absolute",
+          left: 42.09,
+          top: 0,
+          width: 7.909,
+          height: 9.147,
+        }}>
+          <path d={"M 4.522 9.147 L 0 4.616 L 4.521 0 L 7.909 0 L 3.389 4.616 L 7.909 9.147 L 4.522 9.147 Z"} fill="currentColor" fillRule="nonzero" />
+        </svg>
+      </div>
+    </div>
+  );
+}
+export default OrbitXWhite;
