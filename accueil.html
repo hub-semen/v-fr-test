@@ -883,9 +883,9 @@ class Component extends DCLogic {
 
   err(k){
     const f=this.state.f;
-    if(k==="email")return f.email&&!/^[^@\s]+@[^@\s]+\.[a-z]{2}$/i.test(f.email)?"Enter a valid email address.":"";
-    if(k==="username")return f.username&&f.username.length<4?"At least 4 characters.":"";
-    if(k==="dob")return f.dob&&(new Date().getFullYear()-new Date(f.dob).getFullYear())<18?"You must be 18 or over.":"";
+    if(k==="email")return f.email&&!/^[^@\s]+@[^@\s]+\.[a-z]{2}$/i.test(f.email)?"Veuillez saisir une adresse e-mail valide.":"";
+    if(k==="username")return f.username&&f.username.length<4?"Au moins 4 caractères.":"";
+    if(k==="dob")return f.dob&&(new Date().getFullYear()-new Date(f.dob).getFullYear())<18?"Vous devez avoir 18 ans ou plus.":"";
     return "";
   }
 
@@ -914,18 +914,18 @@ class Component extends DCLogic {
       return "transparent";
     };
 
-    const productsArr=[{t:"Odds Scanner",d:"Compare live prices from every connected sportsbook, side by side.",icon:U("ic-scan"),accent:"var(--red)",grad:"radial-gradient(120% 140% at 15% 0%,#5c1214,#1a0505 70%)",glow:"radial-gradient(60% 70% at 85% 20%,rgba(255,41,41,.28),transparent 70%)"},
-      {t:"Brokerage",d:"Direct accounts with more bookmakers, at the limits you want.",icon:STEP_ICONS.brokerDark,accent:"var(--best)",grad:"radial-gradient(120% 140% at 15% 0%,#122a52,#060d1c 70%)",glow:"radial-gradient(60% 70% at 85% 20%,rgba(77,128,255,.28),transparent 70%)"},
-      {t:"Private Betting Account",d:"Direct access to top Asian bookmakers, with high limits included.",icon:STEP_ICONS.lockDark,accent:"#ffc632",grad:"radial-gradient(120% 140% at 15% 0%,#4a3305,#1a1002 70%)",glow:"radial-gradient(60% 70% at 85% 20%,rgba(255,198,50,.28),transparent 70%)"},
-      {t:"Sportsbook",d:"Football, basketball, tennis and more, via our sportsbook.",icon:U("ic-sports"),accent:"var(--up)",grad:"radial-gradient(120% 140% at 15% 0%,#0d3a12,#05130a 70%)",glow:"radial-gradient(60% 70% at 85% 20%,rgba(31,239,26,.28),transparent 70%)"},
-      {t:"Games",d:"Slots now, live tables next.",icon:U("ic-casino"),accent:"#ff1560",grad:"radial-gradient(120% 140% at 15% 0%,#5c1038,#230616 70%)",glow:"radial-gradient(60% 70% at 85% 20%,rgba(255,21,96,.28),transparent 70%)"}];
+    const productsArr=[{t:"Comparateur de cotes",d:"Comparez les prix en direct de tous les bookmakers connectés, côte à côte.",icon:U("ic-scan"),accent:"var(--red)",grad:"radial-gradient(120% 140% at 15% 0%,#5c1214,#1a0505 70%)",glow:"radial-gradient(60% 70% at 85% 20%,rgba(255,41,41,.28),transparent 70%)"},
+      {t:"Courtage",d:"Comptes directs auprès de plus de bookmakers, aux limites que vous souhaitez.",icon:STEP_ICONS.brokerDark,accent:"var(--best)",grad:"radial-gradient(120% 140% at 15% 0%,#122a52,#060d1c 70%)",glow:"radial-gradient(60% 70% at 85% 20%,rgba(77,128,255,.28),transparent 70%)"},
+      {t:"Compte de paris privé",d:"Accès direct aux meilleurs bookmakers asiatiques, avec des limites élevées incluses.",icon:STEP_ICONS.lockDark,accent:"#ffc632",grad:"radial-gradient(120% 140% at 15% 0%,#4a3305,#1a1002 70%)",glow:"radial-gradient(60% 70% at 85% 20%,rgba(255,198,50,.28),transparent 70%)"},
+      {t:"Paris sportifs",d:"Football, basketball, tennis et plus encore, via notre plateforme de paris sportifs.",icon:U("ic-sports"),accent:"var(--up)",grad:"radial-gradient(120% 140% at 15% 0%,#0d3a12,#05130a 70%)",glow:"radial-gradient(60% 70% at 85% 20%,rgba(31,239,26,.28),transparent 70%)"},
+      {t:"Jeux",d:"Des machines à sous dès maintenant, des tables en direct bientôt.",icon:U("ic-casino"),accent:"#ff1560",grad:"radial-gradient(120% 140% at 15% 0%,#5c1038,#230616 70%)",glow:"radial-gradient(60% 70% at 85% 20%,rgba(255,21,96,.28),transparent 70%)"}];
 
     return {
       whatIsProducts:productsArr,
       parY1:(s.scrollY*-0.12)+"px", parY2:(s.scrollY*0.09)+"px", parY3:(s.scrollY*-0.06)+"px",
       bentoRef:this.bentoRef, productsRef:this.productsRef,
 
-      theme:s.theme, themeIcon:dark?"☀":"☾", themeShort:dark?"Light":"Dark",
+      theme:s.theme, themeIcon:dark?"☀":"☾", themeShort:dark?"Clair":"Sombre",
       logoTone:dark?"light":"dark",
       isDesktop:s.view==="desktop", isMobileView:s.view==="mobile",
       frameW:s.view==="mobile"?"390px":"1240px", frameH:s.view==="mobile"?"844px":"900px",
@@ -937,7 +937,7 @@ class Component extends DCLogic {
       productsBg:["scan","broker","private","sports"].includes(s.tab)?"var(--panel3)":"var(--panel2)",
       productsBd:["scan","broker","private","sports"].includes(s.tab)?"var(--red)":"var(--line)",
       productsIcon:STEP_ICONS.grid, productsIconFilter:dark?"filter:none":"filter:invert(1)",
-      productsDropdown:[["Odds Scanner","scan","s-how",U("ic-scan")],["Brokerage","broker","s-products",STEP_ICONS.brokerDark],["Private Betting Account","private","s-products",STEP_ICONS.lockDark],["Sportsbook","sports","s-products",U("ic-sports")],["Games","casino","s-products",U("ic-casino")]].map(([label,k,id,icon])=>({label,icon,iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav(k,id)})),
+      productsDropdown:[["Comparateur de cotes","scan","s-how",U("ic-scan")],["Courtage","broker","s-products",STEP_ICONS.brokerDark],["Compte de paris privé","private","s-products",STEP_ICONS.lockDark],["Paris sportifs","sports","s-products",U("ic-sports")],["Jeux","casino","s-products",U("ic-casino")]].map(([label,k,id,icon])=>({label,icon,iconFilter:dark?"filter:invert(1)":"filter:none",onClick:()=>this.nav(k,id)})),
       langs:[["English","EN","🇬🇧"],["Русский","RU","🇷🇺"],["Español","ES","🇪🇸"]].map(([label,tag,flag],i)=>({
         label, tag, flag,
         color:i===0?"var(--txt)":"var(--txt3)", bg:i===0?"var(--panel2)":"transparent"})),
@@ -950,7 +950,7 @@ class Component extends DCLogic {
       drawerTop:"0",
       stop:ev=>ev.stopPropagation(),
       goPromos:()=>this.nav("promos","s-features"),
-      mtabs:[["lobby","Lobby","",  "",STEP_ICONS.home],["scan","Odds Scan","◈","s-how",U("ic-scan")],["sports","Sportsbook","⬢","s-products",U("ic-sports")],["casino","Games","◉","s-products",U("ic-casino")]].map(([k,label,glyph,id,img])=>({
+      mtabs:[["lobby","Accueil","",  "",STEP_ICONS.home],["scan","Scan de cotes","◈","s-how",U("ic-scan")],["sports","Paris sportifs","⬢","s-products",U("ic-sports")],["casino","Jeux","◉","s-products",U("ic-casino")]].map(([k,label,glyph,id,img])=>({
         label,glyph,isImg:!!img,isGlyph:!img,img,iconFilter:dark?"filter:invert(1)":"filter:none",color:s.tab===k?"var(--red)":"var(--txt3)",onClick:()=>this.nav(k,id)})),
       sideMenuGroups:[
         {h:"Products",items:[
