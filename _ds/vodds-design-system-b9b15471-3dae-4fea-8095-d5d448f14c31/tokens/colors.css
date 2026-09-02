@@ -1,0 +1,72 @@
+/* VOdds — Color tokens
+   Extracted from the VOdds "Emails" Figma file. Base palette + semantic aliases.
+   The brand runs on a near-black ink, an electric red/pink primary, and three
+   vertical accent worlds: SPORTS (blue), CASINO (purple/gold), ESPORTS (neon green). */
+
+:root {
+  /* ---- Brand primary (red / pink) ---- */
+  --vo-red: #ff2929;            /* logo "V", primary CTA — basic-red */
+  --vo-red-contrast: #f81b1b;   /* CTA hover / pressed */
+  --vo-red-deep: #dd443c;       /* muted brand red */
+  --vo-pink: #ff1560;           /* electric magenta — top brand accent */
+  --vo-pink-soft: #ff4f88;      /* lighter pink for hover/tints */
+
+  /* ---- Ink & neutral surfaces ---- */
+  --vo-ink: #010203;            /* true brand black */
+  --vo-night: #12161c;          /* deepest panel */
+  --vo-slate-900: #18222a;
+  --vo-slate-800: #242b35;      /* card / odds chip surface */
+  --vo-slate-700: #28303a;      /* dark-grey — borders, raised cards */
+  --vo-slate-600: #303a47;
+  --vo-grey: #8c8c8c;           /* muted text */
+  --vo-grey-300: #d9d9d9;       /* dividers on light */
+  --vo-mist: #e2e2f3;           /* light-blue tint surface */
+  --vo-cloud: #f5f5f5;          /* email body background */
+  --vo-white: #ffffff;
+
+  /* ---- Vertical: SPORTS (blue / olympic) ---- */
+  --vo-sport-navy: #142a63;     /* olympics-text */
+  --vo-sport-blue: #325092;
+  --vo-sport-azure: #2f6bff;
+
+  /* ---- Vertical: CASINO (purple / gold) ---- */
+  --vo-casino-purple: #460359;
+  --vo-casino-violet: #903ad4;
+  --vo-casino-plum: #241b2b;    /* casino card surface */
+  --vo-gold: #ffc632;           /* jackpot / bonus gold */
+
+  /* ---- Vertical: ESPORTS (neon green) ---- */
+  --vo-neon: #1fef1a;           /* core esports green */
+  --vo-neon-bright: #2dff42;
+  --vo-mint: #87ff84;           /* light neon text */
+  --vo-mint-soft: #a6ffa4;
+
+  /* ---- Semantic ---- */
+  --vo-success: #1fef1a;
+  --vo-danger: #ff2929;
+  --vo-warning: #ffc632;
+  --vo-info: #2f6bff;
+
+  /* ---- Semantic surface / text aliases ---- */
+  --surface-page: var(--vo-cloud);
+  --surface-page-dark: var(--vo-night);
+  --surface-card: var(--vo-white);
+  --surface-card-dark: var(--vo-slate-800);
+  --surface-chip: var(--vo-slate-800);
+  --surface-line: rgba(255, 255, 255, 0.08);
+  --surface-line-dark: var(--vo-slate-700);
+
+  --text-strong: var(--vo-ink);
+  --text-body: #2b3340;
+  --text-muted: var(--vo-grey);
+  --text-on-dark: var(--vo-white);
+  --text-on-dark-muted: rgba(255, 255, 255, 0.62);
+
+  --accent: var(--vo-pink);
+  --accent-action: var(--vo-red);
+  --accent-action-hover: var(--vo-red-contrast);
+
+  /* ---- Compatibility aliases (legacy Figma variable names) ---- */
+  --basic-red: var(--vo-red);
+  --basic-redcontrast: var(--vo-red-contrast);
+}
