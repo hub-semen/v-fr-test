@@ -1,5 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
-  <g transform="translate(4.244,2.301)" fill="#ff2929">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(7.244,5.301)" fill="#ff2929" filter="url(#glow)">
     <path transform="translate(11.058,0)" d="M 14.187 0 L 7.434 16.699 L 7.434 16.686 L 3.622 25.818 L 3.622 25.831 L 3.547 25.992 L 3.559 26.017 L 0 37.398 L 6.892 37.373 L 20.132 5.753 L 22.454 0 L 14.187 0 Z"/>
     <path transform="translate(0,9.952)" d="M 14.604 16.04 L 14.667 15.891 L 7.737 0 L 0 0 L 10.83 26.738 L 11.057 27.446 L 14.616 16.065 L 14.604 16.04 Z"/>
     <path transform="translate(7.724,9.952)" d="M 4.304 21.582 C 4.266 21.669 6.917 15.941 6.942 15.891 L 0 0 C 0.013 0 4.557 15.096 4.304 21.582 Z"/>
