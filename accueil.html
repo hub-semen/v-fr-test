@@ -662,7 +662,7 @@ a:hover{color:var(--red2)}
         <div data-blob="a" style="width:240px;height:240px;background:var(--red);opacity:.1;top:-40px;left:-60px;transform:translateY({{ parY1 }})"></div>
         <div style="max-width:640px;margin:0 auto 26px;text-align:center;position:relative;z-index:1">
           <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:32px;letter-spacing:-.005em;margin:0 0 10px">Pourquoi les parieurs choisissent VOdds</h2>
-          <p style="font-size:13.5px;line-height:1.6;color:var(--txt2);margin:0">Vérifier les cotes sur chaque bookmaker séparément fait perdre du temps et de l'argent. Voici ce qui change quand tout est regroupé au même endroit.</p>
+          <p style="font-size:13.5px;line-height:1.6;color:var(--txt2);margin:0">Vérifier les cotes de chaque site de paris séparément est une perte de temps et d'argent. Tout change lorsque toutes ces informations sont regroupées sur un seul site.</p>
         </div>
         <div data-bento="" ref="{{ bentoRef }}" style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;max-width:840px;margin:0 auto 44px;position:relative;z-index:1">
           <sc-for list="{{ features }}" as="fe" hint-placeholder-count="5">
@@ -681,7 +681,7 @@ a:hover{color:var(--red2)}
 
         <div style="max-width:760px;margin:0 auto;position:relative;z-index:1">
           <div style="text-align:center;margin-bottom:22px">
-            <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:999px;background:var(--panel3);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--txt2)">Aucun compte à demander séparément auprès de chaque bookmaker</div>
+            <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:999px;background:var(--panel3);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--txt2)">Il n'est pas nécessaire d'ouvrir des comptes distincts chez chaque bookmaker</div>
           </div>
           <div style="border-radius:16px;background:var(--panel);border:1px solid var(--line);overflow:hidden">
             <div data-compare="" style="display:grid;grid-template-columns:1fr 1fr">
@@ -1175,11 +1175,11 @@ class Component extends DCLogic {
              {n:"03",t:"Placez un seul pari",d:"Choisissez les meilleures cotes et validez votre pari avec votre solde VOdds. Il n'est pas nécessaire de vous connecter séparément ni de transférer des fonds d'une application à l'autre.",icon:STEP_ICONS.bet},
              {n:"04",t:"Nous l'acheminons pour vous",d:"Votre pari est automatiquement acheminé vers le bookmaker proposant la meilleure cote ; si nécessaire, le montant du pari est réparti entre plusieurs opérateurs afin de garantir qu'il soit intégralement pris en compte.",icon:STEP_ICONS.route}],
       features:[
-        {t:"De meilleures cotes, à chaque pari",d:"Les cotes sont comparées en temps réel entre tous les bookmakers connectés, pour que vous puissiez choisir celui qui rapporte le plus.",icon:STEP_ICONS.target,span:"span 2"},
-        {t:"Cotes en direct, toutes sources",d:"Les prix sont mis à jour en temps réel depuis tous les bookmakers connectés, ce que vous voyez est ce que vous obtenez.",icon:STEP_ICONS.live,span:"span 2"},
-        {t:"Alertes de variation de cotes",d:"Soyez prévenu dès qu'un prix commence à bouger, pour pouvoir agir avant qu'il ne se stabilise.",icon:STEP_ICONS.bell,span:"span 2"},
-        {t:"Tous les sports, un seul écran",d:"Football, basketball, tennis et bien plus, tous comparés dans une même vue simple.",icon:STEP_ICONS.grid,span:"span 3"},
-        {t:"De la place pour des mises plus importantes",d:"L'accès à plusieurs bookmakers permet de placer des mises plus importantes sans faire bouger le prix contre vous.",icon:STEP_ICONS.stack,span:"span 3"}].map((f,i)=>({...f,
+        {t:"De meilleures cotes, à chaque pari",d:"Les cotes sont comparées en temps réel entre tous les bookmakers connectés, ce qui vous permet de choisir l'option offrant le gain le plus élevé.",icon:STEP_ICONS.target,span:"span 2"},
+        {t:"Cotes en direct, toutes sources",d:"Les cotes sont mises à jour en temps réel par tous les bookmakers connectés : vous verrez les données les plus récentes.",icon:STEP_ICONS.live,span:"span 2"},
+        {t:"Alertes de variation de cotes",d:"Recevez des notifications dès que le prix commence à fluctuer, afin de pouvoir réagir avant qu'il ne se stabilise.",icon:STEP_ICONS.bell,span:"span 2"},
+        {t:"Tous les sports, un seul écran",d:"Football, basket-ball, tennis et bien plus encore : tout cela comparé dans un seul et même récapitulatif simple.",icon:STEP_ICONS.grid,span:"span 3"},
+        {t:"La possibilité de placer des paris plus élevés",d:"L'accès aux services de plusieurs sites de paris vous permet de placer des paris plus élevés sans que cela n'entraîne une variation des cotes en votre défaveur.",icon:STEP_ICONS.stack,span:"span 3"}].map((f,i)=>({...f,
         delayMs:(i*80)+"ms", op:s.reveal.bento?1:0, ty:s.reveal.bento?"0px":"22px"})),
       productsList:productsArr.map((p,i)=>({...p,idx:i,
         rowBg:s.activeProduct===i?"var(--panel2)":"transparent",
