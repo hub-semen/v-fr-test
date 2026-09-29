@@ -43,7 +43,7 @@ a:hover{color:#f81b1b}
 #os [data-promo]:hover [data-promo-cta]{opacity:1}
 @media (max-width:760px){
   #os [data-nav]{display:none}
-  [data-herosec]{padding-top:20px!important}
+  [data-herosec]{padding-top:20px!important;grid-template-columns:1fr!important}
   #os [data-grid3]{grid-template-columns:1fr!important}
   #os [data-grid4]{grid-template-columns:1fr!important}
   #os [data-h1]{font-size:32px!important}
@@ -57,15 +57,18 @@ a:hover{color:#f81b1b}
   <div style="position:relative;overflow:hidden">
     <div style="position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,#ff2929,transparent 70%);opacity:.16;filter:blur(46px);top:-140px;left:6%;pointer-events:none;z-index:0"></div>
     <div style="position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,#4d80ff,transparent 70%);opacity:.13;filter:blur(46px);bottom:-120px;right:-100px;pointer-events:none;z-index:0"></div>
-    <section data-herosec style="padding:40px 40px 60px;max-width:1240px;margin:0 auto;position:relative;z-index:1">
+    <section data-herosec style="padding:40px 40px 60px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;max-width:1240px;margin:0 auto;position:relative;z-index:1">
+    <div>
     <div style="font-family:'Chakra Petch';font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:#ff2929;margin-bottom:14px">Trouvez le meilleur prix avant de parier</div>
     <h1 data-h1 style="font-family:'Unbounded',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;font-size:44px;line-height:1.05;margin:0 0 20px">Comparateur de cotes en direct</h1>
     <p style="font-size:15.5px;line-height:1.65;color:#9aa7b4;margin:0 0 30px">Le comparateur de cotes rassemble les prix en direct de tous les bookmakers connectés à votre solde VOdds — Polymarket, PS3838, SBOBET, SingBet, OrbitX et bien d'autres — sur un seul tableau. Comparez, filtrez et placez votre pari auprès du bookmaker proposant le meilleur prix, sans ouvrir cinq comptes séparés.</p>
-    <a href="./" style="display:inline-flex;background:#ff2929;color:#fff;border-radius:11px;padding:15px 30px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase">Ouvrir le comparateur</a>
-  </section>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="./" style="display:flex;align-items:center;background:#ff2929;color:#fff;border-radius:11px;padding:16px 34px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase">S'inscrire</a>
+      <a href="./" style="display:flex;align-items:center;background:none;border:1px solid #232c36;color:#eef2f6;border-radius:10px;padding:16px 28px;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase">Se connecter</a>
+    </div>
+    </div>
 
-  <section style="padding:0 40px 70px">
-    <div style="width:100%;max-width:620px;margin:0 auto;background:#12161c;border:1px solid #1c242c;border-radius:14px;padding:16px 16px 14px;box-shadow:0 24px 60px rgba(0,0,0,.6);position:relative;z-index:1">
+    <div style="width:100%;background:#12161c;border:1px solid #1c242c;border-radius:14px;padding:16px 16px 14px;box-shadow:0 24px 60px rgba(0,0,0,.6);position:relative;z-index:1">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
         <div style="font-size:10px;letter-spacing:.11em;font-weight:800;color:#5f6b78;text-transform:uppercase">Tableau des cotes en direct</div>
         <div style="display:flex;align-items:center;gap:6px;font-family:'Chakra Petch';font-size:9px;letter-spacing:.07em;color:#1fef1a;font-weight:700;text-transform:uppercase"><span style="width:6px;height:6px;border-radius:999px;background:#1fef1a;display:inline-block;animation:osClickPulse 1.6s ease-out infinite"></span>En direct</div>
@@ -242,7 +245,7 @@ a:hover{color:#f81b1b}
           </div>
         </div>
       </div>
-      <div style="font-size:9.5px;color:#5f6b78;margin-top:10px;line-height:1.5">Footnote: Exemple illustratif. La couleur verte indique que le cours vient d'augmenter, tandis que la couleur rouge indique qu'il vient de baisser.</div>
+      <div style="font-size:9.5px;color:#5f6b78;margin-top:10px;line-height:1.5">Exemple illustratif. La couleur verte indique que le cours vient d'augmenter, tandis que la couleur rouge indique qu'il vient de baisser.</div>
     </div>
   </section>
 
