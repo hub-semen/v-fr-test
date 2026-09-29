@@ -39,6 +39,8 @@ a:hover{color:#f81b1b}
 @keyframes osFeed{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
 #os [data-feed]{animation:osFeed 22s linear infinite}
 #os [data-feed-wrap]:hover [data-feed]{animation-play-state:paused}
+#os [data-promo-cta]{opacity:0;transition:opacity .2s ease}
+#os [data-promo]:hover [data-promo-cta]{opacity:1}
 @media (max-width:760px){
   #os [data-nav]{display:none}
   [data-herosec]{padding-top:20px!important}
@@ -296,6 +298,44 @@ a:hover{color:#f81b1b}
       </a>
       <a href="./bookmakers-asiatiques.html" style="aspect-ratio:16/10;border-radius:16px;background:radial-gradient(120% 140% at 50% 15%,#3a0d0f,#12161c 65%);border:1px solid #1c242c;display:grid;place-items:center;padding:18px;transition:border-color .18s ease" style-hover="border-color:#ff2929">
         <img src="assets/logos/bk-p38-g.png" alt="PS3838" style="width:65%;max-width:150px;object-fit:contain;opacity:.95">
+      </a>
+    </div>
+  </section>
+
+  <section style="padding:0 40px 60px;max-width:1240px;margin:0 auto">
+    <div data-grid3 style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <a href="./promotions.html" data-promo="" style="display:block;border-radius:16px;background:#12161c;border:1px solid #1c242c;overflow:hidden">
+        <div style="position:relative">
+          <img src="assets/promos/promo-eurocup.jpg" alt="Top 5 des ligues de football" style="width:100%;height:190px;object-fit:cover;display:block">
+          <div data-promo-cta="" style="position:absolute;inset:0;display:grid;place-items:center;background:rgba(7,9,12,.55)">
+            <span style="display:inline-flex;background:#ff2929;color:#fff;border-radius:11px;padding:12px 22px;font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase">Voir toutes les promotions</span>
+          </div>
+        </div>
+        <div style="padding:20px">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;line-height:1.3;text-transform:uppercase">Top 5 des ligues de football</div>
+        </div>
+      </a>
+      <a href="./promotions.html" data-promo="" style="display:block;border-radius:16px;background:#12161c;border:1px solid #1c242c;overflow:hidden">
+        <div style="position:relative">
+          <img src="assets/promos/promo-uefa-power-play.jpg" alt="L'élite des coupes d'Europe" style="width:100%;height:190px;object-fit:cover;display:block">
+          <div data-promo-cta="" style="position:absolute;inset:0;display:grid;place-items:center;background:rgba(7,9,12,.55)">
+            <span style="display:inline-flex;background:#ff2929;color:#fff;border-radius:11px;padding:12px 22px;font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase">Voir toutes les promotions</span>
+          </div>
+        </div>
+        <div style="padding:20px">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;line-height:1.3;text-transform:uppercase">L'élite des coupes d'Europe</div>
+        </div>
+      </a>
+      <a href="./promotions.html" data-promo="" style="display:block;border-radius:16px;background:#12161c;border:1px solid #1c242c;overflow:hidden">
+        <div style="position:relative">
+          <img src="assets/promos/promo-welcome-casino.jpg" alt="Bonus de 100% sur le premier dépôt" style="width:100%;height:190px;object-fit:cover;display:block">
+          <div data-promo-cta="" style="position:absolute;inset:0;display:grid;place-items:center;background:rgba(7,9,12,.55)">
+            <span style="display:inline-flex;background:#ff2929;color:#fff;border-radius:11px;padding:12px 22px;font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase">Voir toutes les promotions</span>
+          </div>
+        </div>
+        <div style="padding:20px">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;line-height:1.3;text-transform:uppercase">Bonus de 100% sur le premier dépôt</div>
+        </div>
       </a>
     </div>
   </section>
