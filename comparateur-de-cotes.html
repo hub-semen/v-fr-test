@@ -35,6 +35,10 @@ body{margin:0}
 a{color:#ff2929;text-decoration:none}
 a:hover{color:#f81b1b}
 #os{background:#07090c;color:#eef2f6;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+@keyframes osClickPulse{0%{transform:scale(.4);opacity:.7}70%{transform:scale(1.9);opacity:0}100%{transform:scale(1.9);opacity:0}}
+@keyframes osFeed{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+#os [data-feed]{animation:osFeed 22s linear infinite}
+#os [data-feed-wrap]:hover [data-feed]{animation-play-state:paused}
 @media (max-width:760px){
   #os [data-nav]{display:none}
   [data-herosec]{padding-top:20px!important}
@@ -52,10 +56,192 @@ a:hover{color:#f81b1b}
     <div style="position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,#ff2929,transparent 70%);opacity:.16;filter:blur(46px);top:-140px;left:6%;pointer-events:none;z-index:0"></div>
     <div style="position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,#4d80ff,transparent 70%);opacity:.13;filter:blur(46px);bottom:-120px;right:-100px;pointer-events:none;z-index:0"></div>
     <section data-herosec style="padding:40px 40px 60px;max-width:1240px;margin:0 auto;position:relative;z-index:1">
-    <div style="font-family:'Chakra Petch';font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:#ff2929;margin-bottom:14px">Comparateur de cotes</div>
-    <h1 data-h1 style="font-family:'Unbounded',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;font-size:44px;line-height:1.05;margin:0 0 20px">Trouvez le meilleur prix <span style="color:#ff2929">avant de parier</span></h1>
-    <p style="font-size:15.5px;line-height:1.65;color:#9aa7b4;margin:0 0 30px">Le comparateur de cotes rassemble les prix en direct de tous les bookmakers connectés à votre solde VOdds — Polymarket, PS3838, SBOBET, SingBet, OrbitX et bien d'autres — sur un seul tableau. Comparez, filtrez, et placez votre pari auprès du bookmaker proposant le meilleur prix, sans ouvrir cinq comptes séparés.</p>
+    <div style="font-family:'Chakra Petch';font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:#ff2929;margin-bottom:14px">Trouvez le meilleur prix avant de parier</div>
+    <h1 data-h1 style="font-family:'Unbounded',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;font-size:44px;line-height:1.05;margin:0 0 20px">Comparateur de cotes en direct</h1>
+    <p style="font-size:15.5px;line-height:1.65;color:#9aa7b4;margin:0 0 30px">Le comparateur de cotes rassemble les prix en direct de tous les bookmakers connectés à votre solde VOdds — Polymarket, PS3838, SBOBET, SingBet, OrbitX et bien d'autres — sur un seul tableau. Comparez, filtrez et placez votre pari auprès du bookmaker proposant le meilleur prix, sans ouvrir cinq comptes séparés.</p>
     <a href="./" style="display:inline-flex;background:#ff2929;color:#fff;border-radius:11px;padding:15px 30px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase">Ouvrir le comparateur</a>
+  </section>
+
+  <section style="padding:0 40px 50px">
+    <div style="width:100%;max-width:620px;margin:0 auto;background:#12161c;border:1px solid #1c242c;border-radius:14px;padding:16px 16px 14px;box-shadow:0 24px 60px rgba(0,0,0,.6);position:relative;z-index:1">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+        <div style="font-size:10px;letter-spacing:.11em;font-weight:800;color:#5f6b78;text-transform:uppercase">Tableau des cotes en direct</div>
+        <div style="display:flex;align-items:center;gap:6px;font-family:'Chakra Petch';font-size:9px;letter-spacing:.07em;color:#1fef1a;font-weight:700;text-transform:uppercase"><span style="width:6px;height:6px;border-radius:999px;background:#1fef1a;display:inline-block;animation:osClickPulse 1.6s ease-out infinite"></span>En direct</div>
+      </div>
+      <div data-feed-wrap="" style="height:380px;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent)">
+        <div data-feed="" style="display:grid;gap:9px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">Premier League</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Liverpool vs Man City</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.40</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.35</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.31</span></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">La Liga</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Real Madrid vs Barcelona</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.10</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.07</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🏀</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Celtics vs Nuggets</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.93</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.91</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.89</span></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🎾</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">ATP</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Alcaraz vs Sinner</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.86</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.83</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.80</span></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">Serie A</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Inter vs Juventus</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.02</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🏀</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Lakers vs Warriors</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.95</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.92</span></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">Premier League</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Liverpool vs Man City</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.40</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.35</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.31</span></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">La Liga</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Real Madrid vs Barcelona</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.10</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.07</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🏀</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Celtics vs Nuggets</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.93</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.91</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.89</span></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🎾</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">ATP</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Alcaraz vs Sinner</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.86</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.83</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.80</span></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">Serie A</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Inter vs Juventus</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.02</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🏀</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Lakers vs Warriors</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.95</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.92</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:9.5px;color:#5f6b78;margin-top:10px;line-height:1.5">Footnote: Exemple illustratif. La couleur verte indique que le cours vient d'augmenter, tandis que la couleur rouge indique qu'il vient de baisser.</div>
+    </div>
   </section>
 
   <section style="padding:0 40px 70px">
@@ -78,7 +264,7 @@ a:hover{color:#f81b1b}
         <div style="width:36px;height:36px;border-radius:9px;background:radial-gradient(120% 140% at 15% 0%,#5c1214,#1a0505 70%);display:grid;place-items:center;margin-bottom:12px">
           <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 17l5-5 4 3 6-7'/%3E%3Cpath d='M14 8h4v4'/%3E%3C/svg%3E" alt="" style="width:18px;height:18px;object-fit:contain">
         </div>
-        <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;color:#ff2929;margin-bottom:4px">Évolution des prix</div>
+        <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;color:#ff2929;margin-bottom:4px">Évolution des cotes</div>
         <div style="font-size:12px;line-height:1.55;color:#9aa7b4">Suivez l'évolution d'une ligne depuis son ouverture, pour juger si le prix actuel vaut la peine d'être pris.</div>
       </div>
       <div style="padding:18px 17px;border-radius:14px;background:#12161c;border:1px solid #1c242c">
