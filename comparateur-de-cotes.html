@@ -47,6 +47,10 @@ a:hover{color:#f81b1b}
   #os [data-grid3]{grid-template-columns:1fr!important}
   #os [data-grid4]{grid-template-columns:1fr!important}
   #os [data-h1]{font-size:32px!important}
+  #os section{padding-left:18px!important;padding-right:18px!important}
+  #os [data-tickrow]{flex-direction:column;align-items:stretch;gap:8px}
+  #os [data-ticksel]{width:100%;justify-content:space-between;gap:6px}
+  #os [data-ticksel]>div{flex:1}
 }
 </style>
 </helmet>
@@ -75,7 +79,7 @@ a:hover{color:#f81b1b}
       </div>
       <div data-feed-wrap="" style="height:380px;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent)">
         <div data-feed="" style="display:grid;gap:9px">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">⚽</span>
               <div style="min-width:0">
@@ -83,13 +87,13 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Liverpool vs Man City</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.40</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.35</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.31</span></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">⚽</span>
               <div style="min-width:0">
@@ -97,13 +101,13 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Real Madrid vs Barcelona</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.10</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.07</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">🏀</span>
               <div style="min-width:0">
@@ -111,13 +115,13 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Celtics vs Nuggets</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.93</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.91</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.89</span></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">🎾</span>
               <div style="min-width:0">
@@ -125,13 +129,13 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Alcaraz vs Sinner</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.86</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.83</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.80</span></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">⚽</span>
               <div style="min-width:0">
@@ -139,13 +143,13 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Inter vs Juventus</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.02</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">🏀</span>
               <div style="min-width:0">
@@ -153,13 +157,13 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Lakers vs Warriors</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.95</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.92</span></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">⚽</span>
               <div style="min-width:0">
@@ -167,13 +171,13 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Liverpool vs Man City</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.40</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.35</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.31</span></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">⚽</span>
               <div style="min-width:0">
@@ -181,13 +185,13 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Real Madrid vs Barcelona</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.10</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.07</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">🏀</span>
               <div style="min-width:0">
@@ -195,13 +199,13 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Celtics vs Nuggets</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.93</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.91</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.89</span></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">🎾</span>
               <div style="min-width:0">
@@ -209,13 +213,13 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Alcaraz vs Sinner</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.86</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.83</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.80</span></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">⚽</span>
               <div style="min-width:0">
@@ -223,13 +227,13 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Inter vs Juventus</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.02</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
             <div style="display:flex;align-items:center;gap:10px;min-width:0">
               <span style="font-size:19px;flex:none">🏀</span>
               <div style="min-width:0">
@@ -237,7 +241,7 @@ a:hover{color:#f81b1b}
                 <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Lakers vs Warriors</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:7px;flex:none">
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.95</span></div>
               <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.92</span></div>
