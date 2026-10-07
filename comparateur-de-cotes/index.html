@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=5">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=5">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png?v=5">
+<link rel="manifest" href="site.webmanifest?v=5">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800;900&amp;family=Chakra+Petch:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="_ds/vodds-design-system-b9b15471-3dae-4fea-8095-d5d448f14c31/_ds_bundle.js"></script>
+<title>Comparateur de cotes : comparez les bookmakers | VOdds</title>
+<meta name="description" content="Comparez en direct les cotes des bookmakers connectés à votre compte VOdds et placez votre pari sur la meilleure cote depuis un solde unique.">
+<meta name="keywords" content="comparaison de cotes, tableau de cotes en direct, recherche du meilleur prix, comparateur de cotes sportives, agrégateur de cotes">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://vodds.fr/comparateur-de-cotes/">
+<meta property="og:title" content="Comparateur de cotes — Comparez les prix des bookmakers en direct | VOdds">
+<meta property="og:description" content="Comparez les cotes en direct de tous les bookmakers connectés sur un seul tableau. Filtrez par sport et par marché, suivez l'évolution des prix, et pariez toujours au meilleur prix disponible.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vodds.fr/comparateur-de-cotes/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Comparateur de cotes — Comparez les prix des bookmakers en direct | VOdds">
+<meta name="twitter:description" content="Comparez les cotes en direct de tous les bookmakers connectés sur un seul tableau. Filtrez par sport et par marché, suivez l'évolution des prix, et pariez toujours au meilleur prix disponible.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"VOdds","url":"https://vodds.fr/comparateur-de-cotes/","description":"VOdds est un courtier en paris et une plateforme de comparaison de cotes qui connecte les parieurs à plusieurs bookmakers et plateformes d'échange via un compte unique.","sameAs":["https://twitter.com/vodds_official","https://t.me/+eCAiWVjY78w5ZWNl","https://www.instagram.com/vodds_official/","https://www.facebook.com/voddsofficial"]}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{box-sizing:border-box}
+body{margin:0}
+a{color:#ff2929;text-decoration:none}
+a:hover{color:#f81b1b}
+#os{background:#07090c;color:#eef2f6;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+@keyframes osClickPulse{0%{transform:scale(.4);opacity:.7}70%{transform:scale(1.9);opacity:0}100%{transform:scale(1.9);opacity:0}}
+@keyframes osFeed{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+#os [data-feed]{animation:osFeed 22s linear infinite}
+#os [data-feed-wrap]:hover [data-feed]{animation-play-state:paused}
+#os [data-promo-cta]{opacity:0;transition:opacity .2s ease}
+#os [data-promo]:hover [data-promo-cta]{opacity:1}
+@media (max-width:760px){
+  #os [data-nav]{display:none}
+  [data-herosec]{padding-top:20px!important;grid-template-columns:1fr!important}
+  #os [data-grid3]{grid-template-columns:1fr!important}
+  #os [data-grid4]{grid-template-columns:1fr!important}
+  #os [data-h1]{font-size:32px!important}
+  #os section{padding-left:18px!important;padding-right:18px!important}
+  #os [data-tickrow]{flex-direction:column;align-items:stretch;gap:8px}
+  #os [data-ticksel]{width:100%;justify-content:space-between;gap:6px}
+  #os [data-ticksel]>div{flex:1}
+  #os [data-herocta]{flex-wrap:nowrap;gap:8px}
+  #os [data-herocta] a{flex:1;padding:14px 8px!important;font-size:12px!important;white-space:nowrap}
+}
+</style>
+</helmet>
+
+<div id="os">
+  <dc-import name="en-tete" hint-size="100%,64px"></dc-import>
+
+  <div style="position:relative;overflow:hidden">
+    <div style="position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,#ff2929,transparent 70%);opacity:.16;filter:blur(46px);top:-140px;left:6%;pointer-events:none;z-index:0"></div>
+    <div style="position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,#4d80ff,transparent 70%);opacity:.13;filter:blur(46px);bottom:-120px;right:-100px;pointer-events:none;z-index:0"></div>
+    <section data-herosec style="padding:40px 40px 60px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;max-width:1240px;margin:0 auto;position:relative;z-index:1">
+    <div>
+    <div style="font-family:'Chakra Petch';font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:#ff2929;margin-bottom:14px">Trouvez le meilleur prix avant de parier</div>
+    <h1 data-h1 style="font-family:'Unbounded',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;font-size:44px;line-height:1.05;margin:0 0 20px">Comparateur de <span style="color:#ff2929">cotes en direct</span></h1>
+    <p style="font-size:15.5px;line-height:1.65;color:#9aa7b4;margin:0 0 30px">Le comparateur de cotes rassemble les prix en direct de tous les bookmakers connectés à votre solde VOdds — Polymarket, PS3838, SBOBET, SingBet, OrbitX et bien d'autres — sur un seul tableau. Comparez, filtrez et placez votre pari auprès du bookmaker proposant le meilleur prix, sans ouvrir cinq comptes séparés.</p>
+    <div data-herocta="" style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="./" style="display:flex;align-items:center;justify-content:center;background:#ff2929;color:#fff;border-radius:11px;padding:16px 34px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase">S'inscrire</a>
+      <a href="./" style="display:flex;align-items:center;justify-content:center;background:none;border:1px solid #232c36;color:#eef2f6;border-radius:10px;padding:16px 28px;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase">Se connecter</a>
+    </div>
+    </div>
+
+    <div style="width:100%;background:#12161c;border:1px solid #1c242c;border-radius:14px;padding:16px 16px 14px;box-shadow:0 24px 60px rgba(0,0,0,.6);position:relative;z-index:1">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+        <div style="font-size:10px;letter-spacing:.11em;font-weight:800;color:#5f6b78;text-transform:uppercase">Tableau des cotes en direct</div>
+        <div style="display:flex;align-items:center;gap:6px;font-family:'Chakra Petch';font-size:9px;letter-spacing:.07em;color:#1fef1a;font-weight:700;text-transform:uppercase"><span style="width:6px;height:6px;border-radius:999px;background:#1fef1a;display:inline-block;animation:osClickPulse 1.6s ease-out infinite"></span>En direct</div>
+      </div>
+      <div data-feed-wrap="" style="height:380px;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent)">
+        <div data-feed="" style="display:grid;gap:9px">
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">Premier League</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Liverpool vs Man City</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.40</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.35</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.31</span></div>
+            </div>
+          </div>
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">La Liga</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Real Madrid vs Barcelona</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.10</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.07</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
+            </div>
+          </div>
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🏀</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Celtics vs Nuggets</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.93</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.91</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.89</span></div>
+            </div>
+          </div>
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🎾</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">ATP</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Alcaraz vs Sinner</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.86</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.83</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.80</span></div>
+            </div>
+          </div>
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">Serie A</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Inter vs Juventus</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.02</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
+            </div>
+          </div>
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🏀</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Lakers vs Warriors</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.95</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.92</span></div>
+            </div>
+          </div>
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">Premier League</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Liverpool vs Man City</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.40</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.35</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.31</span></div>
+            </div>
+          </div>
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">La Liga</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Real Madrid vs Barcelona</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.10</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.07</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
+            </div>
+          </div>
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🏀</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Celtics vs Nuggets</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.93</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.91</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.89</span></div>
+            </div>
+          </div>
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🎾</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">ATP</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Alcaraz vs Sinner</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.86</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.83</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.80</span></div>
+            </div>
+          </div>
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">⚽</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">Serie A</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Inter vs Juventus</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">OrbitX</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.05</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">2.02</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SingBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
+            </div>
+          </div>
+          <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:#18222a;border:1px solid #1a222b">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0">
+              <span style="font-size:19px;flex:none">🏀</span>
+              <div style="min-width:0">
+                <div style="font-size:9px;color:#5f6b78;font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                <div style="font-size:13.5px;font-weight:700;color:#eef2f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Lakers vs Warriors</div>
+              </div>
+            </div>
+            <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">PS3838</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.98</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">Polymarket</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.95</span></div>
+              <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent"><span style="font-size:9px;font-weight:700;color:#9aa7b4;white-space:nowrap">SBOBet</span><span style="font-family:'Chakra Petch';font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:#eef2f6">1.92</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:9.5px;color:#5f6b78;margin-top:10px;line-height:1.5">Exemple illustratif. La couleur verte indique que le cours vient d'augmenter, tandis que la couleur rouge indique qu'il vient de baisser.</div>
+    </div>
+  </section>
+
+  <section style="padding:0 40px 70px">
+    <div data-grid4 style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1160px;margin:0 auto">
+      <div style="padding:18px 17px;border-radius:14px;background:#12161c;border:1px solid #1c242c">
+        <div style="width:36px;height:36px;border-radius:9px;background:radial-gradient(120% 140% at 15% 0%,#5c1214,#1a0505 70%);display:grid;place-items:center;margin-bottom:12px">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='3'/%3E%3Cpath d='M7 9v6M10.5 11v2M14 8.5v7M17.5 11v2'/%3E%3C/svg%3E" alt="" style="width:18px;height:18px;object-fit:contain">
+        </div>
+        <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;color:#ff2929;margin-bottom:4px">Comparaison en temps réel</div>
+        <div style="font-size:12px;line-height:1.55;color:#9aa7b4">Prix en direct de chaque bookmaker connecté, actualisés en continu pour que le tableau n'affiche jamais un prix obsolète.</div>
+      </div>
+      <div style="padding:18px 17px;border-radius:14px;background:#12161c;border:1px solid #1c242c">
+        <div style="width:36px;height:36px;border-radius:9px;background:radial-gradient(120% 140% at 15% 0%,#5c1214,#1a0505 70%);display:grid;place-items:center;margin-bottom:12px">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 4h18l-7 8.5V19l-4 2v-8.5L3 4Z'/%3E%3C/svg%3E" alt="" style="width:18px;height:18px;object-fit:contain">
+        </div>
+        <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;color:#ff2929;margin-bottom:4px">Filtrage par marché</div>
+        <div style="font-size:12px;line-height:1.55;color:#9aa7b4">Affinez par sport, championnat ou type de marché — y compris les handicaps asiatiques — pour trouver exactement la ligne que vous cherchez.</div>
+      </div>
+      <div style="padding:18px 17px;border-radius:14px;background:#12161c;border:1px solid #1c242c">
+        <div style="width:36px;height:36px;border-radius:9px;background:radial-gradient(120% 140% at 15% 0%,#5c1214,#1a0505 70%);display:grid;place-items:center;margin-bottom:12px">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 17l5-5 4 3 6-7'/%3E%3Cpath d='M14 8h4v4'/%3E%3C/svg%3E" alt="" style="width:18px;height:18px;object-fit:contain">
+        </div>
+        <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;color:#ff2929;margin-bottom:4px">Évolution des cotes</div>
+        <div style="font-size:12px;line-height:1.55;color:#9aa7b4">Suivez l'évolution d'une ligne depuis son ouverture, pour juger si le prix actuel vaut la peine d'être pris.</div>
+      </div>
+      <div style="padding:18px 17px;border-radius:14px;background:#12161c;border:1px solid #1c242c">
+        <div style="width:36px;height:36px;border-radius:9px;background:radial-gradient(120% 140% at 15% 0%,#5c1214,#1a0505 70%);display:grid;place-items:center;margin-bottom:12px">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h4l3-5h6'/%3E%3Cpath d='M4 12h4l3 5h6'/%3E%3Cpath d='m15 5 2.5 2L15 9M15 19l2.5-2L15 15'/%3E%3C/svg%3E" alt="" style="width:18px;height:18px;object-fit:contain">
+        </div>
+        <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;color:#ff2929;margin-bottom:4px">Placement en un clic</div>
+        <div style="font-size:12px;line-height:1.55;color:#9aa7b4">Sélectionnez un prix et VOdds place le pari auprès de ce bookmaker directement depuis votre solde unique — sans transfert.</div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <section style="padding:0 40px 60px;max-width:1240px;margin:0 auto">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:14px;flex-wrap:wrap">
+      <h2 style="font-family:'Unbounded',sans-serif;font-weight:900;text-transform:uppercase;font-size:24px;margin:0">Les bookmakers connectés</h2>
+      <a href="/bookmakers-asiatiques/" style="font-size:12.5px;font-weight:700;color:#ff2929;white-space:nowrap">Voir tout →</a>
+    </div>
+    <p style="font-size:14px;line-height:1.7;color:#9aa7b4;margin:0 0 24px">Plutôt que d'ouvrir dix comptes et d'équilibrer vos soldes manuellement, VOdds regroupe les flux en temps réel des plus grands opérateurs asiatiques et plateformes d'échange. Vous accédez à la profondeur de marché de mastodontes du secteur depuis une interface unique : les meilleurs prix sont automatiquement détectés et vos ordres exécutés instantanément.</p>
+    <div data-grid4 style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+      <a href="/bookmakers-asiatiques/" style="aspect-ratio:16/5;border-radius:16px;background:radial-gradient(120% 140% at 50% 15%,#3a0d0f,#12161c 65%);border:1px solid #1c242c;display:grid;place-items:center;padding:18px;transition:border-color .18s ease" style-hover="border-color:#ff2929">
+        <img src="assets/logos/bk-sbo-g.png" alt="SBOBET" style="width:65%;max-width:150px;object-fit:contain;opacity:.95">
+      </a>
+      <a href="/bookmakers-asiatiques/" style="aspect-ratio:16/5;border-radius:16px;background:radial-gradient(120% 140% at 50% 15%,#3a0d0f,#12161c 65%);border:1px solid #1c242c;display:grid;place-items:center;padding:18px;transition:border-color .18s ease" style-hover="border-color:#ff2929">
+        <img src="assets/logos/bk-sng-g.png" alt="SingBet" style="width:65%;max-width:150px;object-fit:contain;opacity:.95">
+      </a>
+      <a href="/bookmakers-asiatiques/" style="aspect-ratio:16/5;border-radius:16px;background:radial-gradient(120% 140% at 50% 15%,#3a0d0f,#12161c 65%);border:1px solid #1c242c;display:grid;place-items:center;padding:18px;transition:border-color .18s ease" style-hover="border-color:#ff2929">
+        <img src="assets/logos/bk-orb-g.svg" alt="OrbitX" style="width:65%;max-width:150px;object-fit:contain;opacity:.95">
+      </a>
+      <a href="/bookmakers-asiatiques/" style="aspect-ratio:16/5;border-radius:16px;background:radial-gradient(120% 140% at 50% 15%,#3a0d0f,#12161c 65%);border:1px solid #1c242c;display:grid;place-items:center;padding:18px;transition:border-color .18s ease" style-hover="border-color:#ff2929">
+        <img src="assets/logos/bk-p38-g.png" alt="PS3838" style="width:65%;max-width:150px;object-fit:contain;opacity:.95">
+      </a>
+    </div>
+  </section>
+
+  <section style="padding:0 40px 60px;max-width:1240px;margin:0 auto">
+    <div data-grid3 style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <a href="/promotions/" data-promo="" style="display:block;border-radius:16px;background:#12161c;border:1px solid #1c242c;overflow:hidden">
+        <div style="position:relative">
+          <img src="assets/promos/promo-crypto-top5-leagues.jpg" alt="Top 5 des ligues de football" style="width:100%;height:190px;object-fit:cover;object-position:top;display:block">
+          <div data-promo-cta="" style="position:absolute;inset:0;display:grid;place-items:center;background:rgba(7,9,12,.55)">
+            <span style="display:inline-flex;background:#ff2929;color:#fff;border-radius:11px;padding:12px 22px;font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase">Voir toutes les promotions</span>
+          </div>
+        </div>
+        <div style="padding:20px">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;line-height:1.3;text-transform:uppercase">Top 5 des ligues de football</div>
+        </div>
+      </a>
+      <a href="/promotions/" data-promo="" style="display:block;border-radius:16px;background:#12161c;border:1px solid #1c242c;overflow:hidden">
+        <div style="position:relative">
+          <img src="assets/promos/promo-crypto-ucl.jpg" alt="L'élite des coupes d'Europe" style="width:100%;height:190px;object-fit:cover;object-position:top;display:block">
+          <div data-promo-cta="" style="position:absolute;inset:0;display:grid;place-items:center;background:rgba(7,9,12,.55)">
+            <span style="display:inline-flex;background:#ff2929;color:#fff;border-radius:11px;padding:12px 22px;font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase">Voir toutes les promotions</span>
+          </div>
+        </div>
+        <div style="padding:20px">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;line-height:1.3;text-transform:uppercase">L'élite des coupes d'Europe</div>
+        </div>
+      </a>
+      <a href="/promotions/" data-promo="" style="display:block;border-radius:16px;background:#12161c;border:1px solid #1c242c;overflow:hidden">
+        <div style="position:relative">
+          <img src="assets/promos/promo-crypto-bonus-giftbox.jpg" alt="Bonus de 100% sur le premier dépôt" style="width:100%;height:190px;object-fit:cover;object-position:top;display:block">
+          <div data-promo-cta="" style="position:absolute;inset:0;display:grid;place-items:center;background:rgba(7,9,12,.55)">
+            <span style="display:inline-flex;background:#ff2929;color:#fff;border-radius:11px;padding:12px 22px;font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase">Voir toutes les promotions</span>
+          </div>
+        </div>
+        <div style="padding:20px">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;line-height:1.3;text-transform:uppercase">Bonus de 100% sur le premier dépôt</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section style="padding:0 40px 80px;max-width:1240px;margin:0 auto">
+    <h2 style="font-family:'Unbounded',sans-serif;font-weight:900;text-transform:uppercase;font-size:24px;margin:0 0 20px">Questions fréquentes</h2>
+    <div style="display:grid;gap:1px;background:#1c242c;border-radius:12px;overflow:hidden">
+      <div style="padding:18px 20px;background:#12161c">
+        <div style="font-size:13.5px;font-weight:800;margin-bottom:6px">Le comparateur de cotes est-il gratuit ?</div>
+        <div style="font-size:12.5px;line-height:1.55;color:#9aa7b4">En effet, le scanner de cotes est gratuit. Il vous suffit de vous inscrire sur la plateforme. Mais si vous souhaitez parier, vous devrez tout de même approvisionner votre compte selon le mode de paiement qui vous convient le mieux. En effet, après une certaine période d'inactivité, votre compte risque d'être gelé. Dans ce cas, il vous suffit de contacter le service client.</div>
+      </div>
+      <div style="padding:18px 20px;background:#12161c">
+        <div style="font-size:13.5px;font-weight:800;margin-bottom:6px">À quelle fréquence les cotes sont-elles actualisées?</div>
+        <div style="font-size:12.5px;line-height:1.55;color:#9aa7b4">La norme technique pour les canaux de transmission de données directs dans ce secteur — notamment pour l'API UNITY de VOdds — impose une latence ne dépassant pas 1 seconde (généralement comprise entre 200 et 800 ms, en fonction de votre localisation et de la qualité de votre connexion au serveur).</div>
+      </div>
+      <div style="padding:18px 20px;background:#12161c">
+        <div style="font-size:13.5px;font-weight:800;margin-bottom:6px">Puis-je parier directement depuis le comparateur?</div>
+        <div style="font-size:12.5px;line-height:1.55;color:#9aa7b4">Oui, bien sûr. Il vous suffit de trouver le match et le marché de paris qui vous intéressent, de sélectionner la cote de bookmaker souhaitée, et le système choisira automatiquement la meilleure cote.</div>
+      </div>
+      <div style="padding:18px 20px;background:#12161c">
+        <div style="font-size:13.5px;font-weight:800;margin-bottom:6px">Quels sports et quels marchés sont couverts?</div>
+        <div style="font-size:12.5px;line-height:1.55;color:#9aa7b4">Grâce au comparateur de bookmakers, vous pouvez parier sur le football, le tennis et le basket-ball. Principaux marchés : handicaps asiatiques (entiers, demi-handicaps, quarts de handicap), totaux (Over/Under), 1X2 et paris sur le vainqueur. La plateforme couvre aussi bien les tournois majeurs que plus de 1 500 ligues régionales, et grâce à OrbitX, vous avez accès au pari sur le marché (Back/Lay).</div>
+      </div>
+      <div style="padding:18px 20px;background:#12161c">
+        <div style="font-size:13.5px;font-weight:800;margin-bottom:6px">Quels sports et quels marchés sont couverts ?</div>
+        <div style="font-size:12.5px;line-height:1.55;color:#9aa7b4">Sur VOdds, l'offre couvre principalement le football, le tennis et le basket-ball sur les marchés clés comme le 1X2, les handicaps asiatiques et les totals, en pré-match comme en direct.</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:25px 40px 36px;background:#07090c;max-width:1240px;margin:0 auto">
+    <h2 style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:#9aa7b4;margin:0 0 8px">Le comparateur de cotes VOdds</h2>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 10px;max-width:100ch">Le scanner de cotes est un outil permettant de suivre l'évolution des cotes sur les événements sportifs. Il permet de voir comment évoluent les cotes proposées par les bookmakers avant le début du match, de comparer les cotes initiales et actuelles, et de repérer les événements pour lesquels les cotes ont connu une hausse ou une baisse notable.</p>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 20px;max-width:100ch">Grâce au comparateur de cotes VOdds, vous pourrez consulter en temps réel les cotes de centaines d'événements, notamment de football, de tennis et de basket-ball. Ce service vous permet de comparer les cotes proposées par les meilleurs bookmakers depuis un seul et même compte.</p>
+
+    <h3 style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:#9aa7b4;margin:0 0 8px">Comment fonctionne le comparateur de cotes</h3>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 10px;max-width:100ch">Les cotes déterminent le montant que vous pouvez gagner grâce à un pari et reflètent l'estimation du bookmaker de la probabilité d'un événement. Même de légères différences de cotes peuvent avoir un impact significatif sur vos gains à long terme. Par exemple, parier sur le même résultat à une cote plus élevée augmente vos gains potentiels sans accroître votre risque.</p>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 10px;max-width:100ch">Un comparateur de cote recueille des données sur les cotes de plusieurs bookmakers grâce à une technologie automatisée et les affiche sur un tableau de bord unique. Les utilisateurs peuvent filtrer les résultats par sport, événement, type de marché ou bookmaker. Lorsque les cotes évoluent, le scanner se met à jour en temps réel, ce qui permet aux parieurs de réagir rapidement aux nouvelles opportunités.</p>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 6px;max-width:100ch">Vous pouvez consulter les informations ou utiliser les fonctionnalités suivantes:</p>
+    <ul style="margin:0 0 20px;padding-left:18px;display:grid;gap:4px;max-width:100ch">
+      <li style="font-size:12px;line-height:1.6;color:#5f6b78">suivi automatique des cotes;</li>
+      <li style="font-size:12px;line-height:1.6;color:#5f6b78">recherche rapide des meilleures cotes possibles;</li>
+      <li style="font-size:12px;line-height:1.6;color:#5f6b78">informations sur différents sports ou marchés;</li>
+      <li style="font-size:12px;line-height:1.6;color:#5f6b78">affichage clair de la hausse et de la baisse des cotes dans un tableau simple;</li>
+      <li style="font-size:12px;line-height:1.6;color:#5f6b78">possibilité d'analyser les cotes de plusieurs bookmakers au sein d'un même compte.</li>
+    </ul>
+
+    <h3 style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:#9aa7b4;margin:0 0 8px">Les bookmakers comparés depuis un seul compte</h3>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 10px;max-width:100ch">L'utilisateur n'a plus besoin d'ouvrir lui-même de nombreux sites de bookmakers et d'événements, ni de vérifier régulièrement si les cotes ont changé. VOdds compare les cotes en direct proposées par les différents bookmakers (Polymarket, PS3838, SBOBet, SingBet et OrbitX) déjà reliés à un seul compte VOdds, et le pari est placé depuis ce même compte. Pas besoin d'un deuxième compte ni de virement.</p>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 20px;max-width:100ch">Mais ce n'est pas le seul avantage. En effet, le comparateur de cotes paris sportifs élimine tout virement entre comptes, évite de refaire la procédure KYC et permet de disposer d'un bankroll unique. Tout se fait exclusivement via un seul compte.</p>
+
+    <h3 style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:#9aa7b4;margin:0 0 8px">Cotes asiatiques et handicap asiatique</h3>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 10px;max-width:100ch">Si l'on compare un même match chez un comparateur de cote foot asiatique et chez un bookmaker français agréé par l'ANJ, les cotes seront presque toujours plus élevées en Asie.</p>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 10px;max-width:100ch">À quoi cette différence est-elle due ? Les bookmakers européens fonctionnent selon un modèle récréatif. Si un joueur commence à gagner régulièrement, son compte est rapidement restreint (les limites de paris sont « réduites »). La marge moyenne sur le marché réglementé français se situe entre 7 % et 12 % (notamment sur les marchés tripartites 1X2).</p>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 20px;max-width:100ch">Les bookmakers asiatiques, quant à eux, ne limitent jamais les joueurs qui réussissent. Bien au contraire, ils utilisent les paris des professionnels (« sharp money ») pour ajuster parfaitement leurs cotes et les rendre aussi précises que possible. Sur les paris asiatiques (par exemple, handicap asiatique), la marge ne représente souvent que 1,5 % à 3 %. En excluant le match nul et en attirant des volumes colossaux de paris (« liquidité »), les bookmakers asiatiques tirent leurs bénéfices du chiffre d'affaires plutôt que d'une commission élevée prélevée sur chaque parieur.</p>
+
+    <h3 style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:#9aa7b4;margin:0 0 8px">Repérer un écart de cote exploitable</h3>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 10px;max-width:100ch">Une opportunité d'arbitrage se présente lorsque deux bookmakers évaluent un même événement différemment et proposent des cotes distinctes. Tirer parti de ces écarts de cotes est la clé pour réaliser un arbitrage, ou «arb».</p>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 10px;max-width:100ch">Par exemple, le bookmaker « A » propose une cote de 2,04 sur le marché « Plus de 2,5 buts », tandis que le bookmaker « B » propose une cote de 2,08 sur le marché « Moins de 2,5 buts » pour le même match.</p>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 10px;max-width:100ch">Il s'agit là d'une opportunité d'arbitrage, ou « surebet ». Les deux cotes rapportent plus que la mise initiale et, bien sûr, l'un des paris sera gagnant.</p>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0 0 10px;max-width:100ch">Pour garantir le même bénéfice quel que soit le résultat, la mise est répartie entre les deux issues. Chez le bookmaker « A », 50,49 unités sont mises à une cote de 2,04 ; chez le bookmaker « B », 49,51 unités sont mises à une cote de 2,08.</p>
+    <p style="font-size:12px;line-height:1.75;color:#5f6b78;margin:0;max-width:100ch">La mise totale s'élève à 100 unités, et quel que soit le pari gagnant, le rendement garanti est de 2,99 unités (soit un bénéfice de près de 3 % sur la mise totale).</p>
+  </section>
+
+  <dc-import name="pied-de-page" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>
