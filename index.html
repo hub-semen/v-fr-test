@@ -275,7 +275,7 @@ a:hover{color:var(--red2)}
             <a href="/singbet/" style="display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:9px;background:#18222a;border:1px solid #232c36;min-height:46px"><span style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#eef2f6">SingBet</span></a>
             <a href="/orbitx/" style="display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:9px;background:#18222a;border:1px solid #232c36;min-height:46px"><span style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#eef2f6">OrbitX</span></a>
             -->
-            <a href="/bookmakers-asiatiques/" style="display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:9px;background:#18222a;border:1px solid #232c36;min-height:46px"><span style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#eef2f6">Bookmakers</span></a>
+            <a href="/bookmakers/" style="display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:9px;background:#18222a;border:1px solid #232c36;min-height:46px"><span style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#eef2f6">Bookmakers</span></a>
           </div>
           <div style="display:grid;gap:5px">
             <span style="font-size:9px;letter-spacing:.12em;font-weight:800;color:#5f6b78">Entreprise</span>
@@ -422,7 +422,7 @@ a:hover{color:var(--red2)}
           </sc-for>
         </div>
         <p style="font-size:12px;line-height:1.65;color:#5f6b78;margin:18px 0 0">VOdds centralise l'accès aux meilleures opportunités de pari en comparant en temps réel les cotes, les limites et les marchés disponibles. La plateforme regroupe des bookmakers sharp aux marges ultra-réduites (~2 %) et à des plafonds élevés, des spécialistes du handicap asiatique permettant de supprimer le risque de nul, ainsi qu'une couverture étendue des ligues secondaires (+1 500 championnats). Elle intègre également les fonctionnalités de betting exchange pour le trading de cotes (back/lay) via la liquidité des exchanges, ainsi que l'accès aux contrats sur des marchés prédictifs basés sur la blockchain pour les événements sportifs.</p>
-        <a href="/bookmakers-asiatiques/" style="display:inline-block;margin-top:12px;background:none;border:0;color:var(--red);font-size:12.5px;font-weight:700;letter-spacing:.03em;cursor:pointer;font-family:var(--font-body);padding:0;text-decoration:none" style-hover="color:var(--red2)">Voir tous les bookmakers asiatiques →</a>
+        <a href="/bookmakers/" style="display:inline-block;margin-top:12px;background:none;border:0;color:var(--red);font-size:12.5px;font-weight:700;letter-spacing:.03em;cursor:pointer;font-family:var(--font-body);padding:0;text-decoration:none" style-hover="color:var(--red2)">Voir tous les bookmakers asiatiques →</a>
       </section>
 
       <section data-sec="" style="padding:104px 40px 0;border-top:1px solid var(--line2);max-width:1240px;margin:0 auto" id="courtage">
@@ -837,7 +837,7 @@ a:hover{color:var(--red2)}
         <div style="display:grid;gap:7px">
           <a href="/comparateur-de-cotes/" style="font-size:12px;color:#9aa7b4">Comparateur de cotes</a>
           <a href="./#courtage" style="font-size:12px;color:#9aa7b4">Courtage</a>
-          <a href="/bookmakers-asiatiques/" style="font-size:12px;color:#9aa7b4">Bookmakers</a>
+          <a href="/bookmakers/" style="font-size:12px;color:#9aa7b4">Bookmakers</a>
           <!-- Hidden per request: Compte de paris privé (footer)
           <a href="/compte-de-paris-prive/" style="font-size:12px;color:#9aa7b4">Compte de paris privé</a>
           -->
@@ -1267,7 +1267,7 @@ class Component extends DCLogic {
       payFull:PAYS.map(([n,t,g,pri,desc])=>({n,t,grey:U(g),desc,pri})),
       faq:FAQ.map(([q,a])=>({q,a})),
       footCols:[{h:"Produits",items:[["Comparateur de cotes","./comparateur-de-cotes.html"],["Courtage","./#courtage"],["Compte de paris privé","./compte-de-paris-prive.html"],["Paris sportifs","./paris-sportifs.html"],["Jeux","./jeux.html"]].map(([label,href])=>({label,href}))},
-                {h:"Bookmakers",items:[["Polymarket","./polymarket.html"],["PS3838","./ps3838.html"],["SBOBet","./sbobet.html"],["SingBet","./singbet.html"],["OrbitX","./orbitx.html"],["Bookmakers asiatiques","./bookmakers-asiatiques.html"]].map(([label,href])=>({label,href}))},
+                {h:"Bookmakers",items:[["Polymarket","./polymarket.html"],["PS3838","./ps3838.html"],["SBOBet","./sbobet.html"],["SingBet","./singbet.html"],["OrbitX","./orbitx.html"],["Bookmakers","/bookmakers/"]].map(([label,href])=>({label,href}))},
                 {h:"Entreprise",items:[["À propos","#"],["Conditions générales","#"],["Contact","#"],["Blog","#"],["FAQ","#"],["Paiements","./paiements.html"]].map(([label,href])=>({label,href}))}],
       support:["Chat en direct","Telegram","WhatsApp"],
       socialTone:dark?"dark":"light", socialPlatforms:["telegram","x"],
