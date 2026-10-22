@@ -1,4 +1,6 @@
 User-agent: *
-Allow: /
+Disallow: /*?
+Disallow: /filter/
+Disallow: /*utm=
 
 Sitemap: https://vodds.fr/sitemap.xml
