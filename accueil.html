@@ -61,6 +61,7 @@
 <meta name="twitter:title" content="VOdds — Comparez les cotes, pariez au meilleur prix">
 <meta name="twitter:description" content="Inscrivez-vous une fois. Alimentez un seul compte. Pariez au meilleur prix sur tous les bookmakers connectés.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"VOdds","url":"https://vodds.fr/","description":"VOdds est un courtier en paris et une plateforme de comparaison de cotes qui connecte les parieurs à plusieurs bookmakers et plateformes d'échange via un seul compte.","sameAs":["https://twitter.com/vodds_official","https://t.me/+eCAiWVjY78w5ZWNl","https://www.instagram.com/vodds_official/","https://www.facebook.com/voddsofficial"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"VOdds est-il un bookmaker ?","acceptedAnswer":{"@type":"Answer","text":"Non. VOdds est un courtier en paris et une plateforme de comparaison de cotes. Nous conservons votre solde et envoyons votre pari au bookmaker ou à la plateforme d'échange proposant le meilleur prix. Nous ne fixons pas les cotes nous-mêmes."}},{"@type":"Question","name":"Ai-je besoin d'un compte séparé chez chaque bookmaker ?","acceptedAnswer":{"@type":"Answer","text":"Non. Vous vous inscrivez une seule fois auprès de VOdds et alimentez un seul solde. Vous pouvez commencer à parier immédiatement auprès de tous les bookmakers connectés, sans inscription ni processus d'approbation séparé ailleurs."}},{"@type":"Question","name":"Comment fonctionne le routage ?","acceptedAnswer":{"@type":"Answer","text":"VOdds compare les prix de tous les bookmakers et plateformes d'échange connectés. Lorsque vous placez un pari, il est envoyé à celui qui propose le meilleur prix. Si ce fournisseur ne peut pas prendre la mise complète, le reste est réparti entre les prochains meilleurs prix."}},{"@type":"Question","name":"Combien ça coûte ?","acceptedAnswer":{"@type":"Answer","text":"Il n'y a pas d'abonnement. Les détails tarifaires sont affichés sur le ticket de pari avant que vous confirmiez un pari."}},{"@type":"Question","name":"Comment alimenter le compte ?","acceptedAnswer":{"@type":"Answer","text":"Visa et Mastercard sont instantanés. Tether, Bitcoin, Ethereum, USD Coin et TRON sont crédités en 1 à 10 minutes. Le virement bancaire prend 1 à 5 jours ouvrés, et Jetonbank, Payz, Skrill et Neteller sont instantanés."}},{"@type":"Question","name":"Où VOdds est-il disponible ?","acceptedAnswer":{"@type":"Answer","text":"Dans la plupart des marchés. Non disponible aux États-Unis, à Singapour, au Vietnam ou aux Philippines."}},{"@type":"Question","name":"Qui détient la licence de VOdds ?","acceptedAnswer":{"@type":"Answer","text":"Ole Group International B.V., enregistrée à Curaçao (société 150383), sous licence du Gaming Control Board n° OGL/2024/1358/1233."}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800;900&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="_ds/vodds-design-system-b9b15471-3dae-4fea-8095-d5d448f14c31/tokens/fonts.css">
@@ -337,25 +338,258 @@ a:hover{color:var(--red2)}
           </div>
           <div data-feed-wrap="" style="height:380px;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent)">
             <div data-feed="" style="display:grid;gap:9px">
-              <sc-for list="{{ tickerFeed }}" as="tr" hint-placeholder-count="12">
-                <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
                   <div style="display:flex;align-items:center;gap:10px;min-width:0">
-                    <span style="font-size:19px;flex:none">{{ tr.emoji }}</span>
+                    <span style="font-size:19px;flex:none">⚽</span>
                     <div style="min-width:0">
-                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">{{ tr.league }}</div>
-                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ tr.match }}</div>
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">Premier League</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Liverpool vs Man City</div>
                     </div>
                   </div>
                   <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
-                    <sc-for list="{{ tr.books }}" as="bk" hint-placeholder-count="3">
-                      <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:{{ bk.bg }};transition:background .3s ease">
-                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">{{ bk.name }}</span>
-                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:{{ bk.color }};transition:color .3s ease">{{ bk.price }}</span>
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">Polymarket</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.40</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SBOBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.35</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SingBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.31</span>
                       </div>
-                    </sc-for>
                   </div>
                 </div>
-              </sc-for>
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="font-size:19px;flex:none">⚽</span>
+                    <div style="min-width:0">
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">La Liga</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Real Madrid vs Barcelona</div>
+                    </div>
+                  </div>
+                  <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">PS3838</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.10</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">Polymarket</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.07</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">OrbitX</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.05</span>
+                      </div>
+                  </div>
+                </div>
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="font-size:19px;flex:none">🏀</span>
+                    <div style="min-width:0">
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Celtics vs Nuggets</div>
+                    </div>
+                  </div>
+                  <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SBOBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.93</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">PS3838</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.91</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">OrbitX</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.89</span>
+                      </div>
+                  </div>
+                </div>
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="font-size:19px;flex:none">🎾</span>
+                    <div style="min-width:0">
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">ATP</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Alcaraz vs Sinner</div>
+                    </div>
+                  </div>
+                  <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">Polymarket</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.86</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SBOBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.83</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SingBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.80</span>
+                      </div>
+                  </div>
+                </div>
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="font-size:19px;flex:none">⚽</span>
+                    <div style="min-width:0">
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">Serie A</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Inter vs Juventus</div>
+                    </div>
+                  </div>
+                  <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">OrbitX</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.05</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">PS3838</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.02</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SingBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.98</span>
+                      </div>
+                  </div>
+                </div>
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="font-size:19px;flex:none">🏀</span>
+                    <div style="min-width:0">
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Lakers vs Warriors</div>
+                    </div>
+                  </div>
+                  <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">PS3838</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.98</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">Polymarket</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.95</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SBOBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.92</span>
+                      </div>
+                  </div>
+                </div>
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="font-size:19px;flex:none">⚽</span>
+                    <div style="min-width:0">
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">Premier League</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Liverpool vs Man City</div>
+                    </div>
+                  </div>
+                  <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">Polymarket</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.40</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SBOBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.35</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SingBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.31</span>
+                      </div>
+                  </div>
+                </div>
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="font-size:19px;flex:none">⚽</span>
+                    <div style="min-width:0">
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">La Liga</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Real Madrid vs Barcelona</div>
+                    </div>
+                  </div>
+                  <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">PS3838</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.10</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">Polymarket</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.07</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">OrbitX</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.05</span>
+                      </div>
+                  </div>
+                </div>
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="font-size:19px;flex:none">🏀</span>
+                    <div style="min-width:0">
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Celtics vs Nuggets</div>
+                    </div>
+                  </div>
+                  <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SBOBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.93</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">PS3838</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.91</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">OrbitX</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.89</span>
+                      </div>
+                  </div>
+                </div>
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="font-size:19px;flex:none">🎾</span>
+                    <div style="min-width:0">
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">ATP</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Alcaraz vs Sinner</div>
+                    </div>
+                  </div>
+                  <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">Polymarket</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.86</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SBOBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.83</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SingBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.80</span>
+                      </div>
+                  </div>
+                </div>
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="font-size:19px;flex:none">⚽</span>
+                    <div style="min-width:0">
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">Serie A</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Inter vs Juventus</div>
+                    </div>
+                  </div>
+                  <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">OrbitX</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.05</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">PS3838</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">2.02</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SingBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.98</span>
+                      </div>
+                  </div>
+                </div>
+              <div data-tickrow="" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line2)">
+                  <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                    <span style="font-size:19px;flex:none">🏀</span>
+                    <div style="min-width:0">
+                      <div style="font-size:9px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.05em">NBA</div>
+                      <div style="font-size:13.5px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Lakers vs Warriors</div>
+                    </div>
+                  </div>
+                  <div data-ticksel="" style="display:flex;align-items:center;gap:7px;flex:none">
+                    <div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">PS3838</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.98</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">Polymarket</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.95</span>
+                      </div><div style="display:grid;justify-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:transparent;transition:background .3s ease">
+                        <span style="font-size:9px;font-weight:700;color:var(--txt2);white-space:nowrap">SBOBet</span>
+                        <span style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:15px;font-weight:700;color:var(--txt);transition:color .3s ease">1.92</span>
+                      </div>
+                  </div>
+                </div>
             </div>
           </div>
           <div style="font-size:9.5px;color:var(--txt3);margin-top:10px;line-height:1.5">Exemple illustratif. La couleur verte indique que le cours vient d'augmenter, tandis que la couleur rouge indique qu'il vient de baisser.</div>
@@ -370,17 +604,15 @@ a:hover{color:var(--red2)}
         </div>
 
         <div data-whatgrid="" style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;max-width:1100px;margin:30px auto 0;position:relative;z-index:1">
-          <sc-for list="{{ whatIsProductsA }}" as="wp" hint-placeholder-count="1">
-            <div data-tilt="" style="padding:18px 17px;border-radius:14px;background:var(--panel);border:1px solid var(--line)">
-              <div style="width:36px;height:36px;border-radius:9px;background:{{ wp.grad }};display:grid;place-items:center;margin-bottom:12px">
-                <img src="{{ wp.icon }}" alt="" style="width:18px;height:18px;object-fit:contain;filter:invert(1) brightness(1.4)">
+          <div data-tilt="" style="padding:18px 17px;border-radius:14px;background:var(--panel);border:1px solid var(--line)">
+              <div style="width:36px;height:36px;border-radius:9px;background:radial-gradient(120% 140% at 15% 0%,#5c1214,#1a0505 70%);display:grid;place-items:center;margin-bottom:12px">
+                <img src="assets/ic-scan.png" alt="" style="width:18px;height:18px;object-fit:contain;filter:invert(1) brightness(1.4)">
               </div>
               <div data-tilt-body="">
-                <div style="font-family:var(--font-display);font-weight:900;font-size:15px;color:{{ wp.accent }};margin-bottom:4px">{{ wp.t }}</div>
-                <div style="font-size:12px;line-height:1.55;color:var(--txt2)">{{ wp.d }}</div>
+                <div style="font-family:var(--font-display);font-weight:900;font-size:15px;color:var(--red);margin-bottom:4px">Comparateur de cotes</div>
+                <div style="font-size:12px;line-height:1.55;color:var(--txt2)">Comparez les cotes de tous les bookmakers connectés en temps réel.</div>
               </div>
             </div>
-          </sc-for>
           <a data-tilt="" href="./#courtage" style="padding:18px 17px;border-radius:14px;background:var(--panel);border:1px solid var(--line);text-decoration:none;color:inherit;display:block">
             <div style="width:36px;height:36px;border-radius:9px;background:radial-gradient(120% 140% at 15% 0%,#122a52,#060d1c 70%);display:grid;place-items:center;margin-bottom:12px">
               <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h4l3-5h6'/%3E%3Cpath d='M4 12h4l3 5h6'/%3E%3Cpath d='m15 5 2.5 2L15 9M15 19l2.5-2L15 15'/%3E%3C/svg%3E" alt="" style="width:18px;height:18px;object-fit:contain;filter:invert(1) brightness(1.4)">
@@ -390,17 +622,33 @@ a:hover{color:var(--red2)}
               <div style="font-size:12px;line-height:1.55;color:var(--txt2)">Des comptes directs auprès de plusieurs sites de paris, avec des limites à votre choix.</div>
             </div>
           </a>
-          <sc-for list="{{ whatIsProductsB }}" as="wp" hint-placeholder-count="3">
-            <div data-tilt="" style="padding:18px 17px;border-radius:14px;background:var(--panel);border:1px solid var(--line)">
-              <div style="width:36px;height:36px;border-radius:9px;background:{{ wp.grad }};display:grid;place-items:center;margin-bottom:12px">
-                <img src="{{ wp.icon }}" alt="" style="width:18px;height:18px;object-fit:contain;filter:invert(1) brightness(1.4)">
+          <div data-tilt="" style="padding:18px 17px;border-radius:14px;background:var(--panel);border:1px solid var(--line)">
+              <div style="width:36px;height:36px;border-radius:9px;background:radial-gradient(120% 140% at 15% 0%,#4a3305,#1a1002 70%);display:grid;place-items:center;margin-bottom:12px">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='10.5' width='14' height='9' rx='2'/%3E%3Cpath d='M8 10.5V7.8a4 4 0 0 1 8 0v2.7'/%3E%3Ccircle cx='12' cy='15' r='1.1' fill='%23000000' stroke='none'/%3E%3C/svg%3E" alt="" style="width:18px;height:18px;object-fit:contain;filter:invert(1) brightness(1.4)">
               </div>
               <div data-tilt-body="">
-                <div style="font-family:var(--font-display);font-weight:900;font-size:15px;color:{{ wp.accent }};margin-bottom:4px">{{ wp.t }}</div>
-                <div style="font-size:12px;line-height:1.55;color:var(--txt2)">{{ wp.d }}</div>
+                <div style="font-family:var(--font-display);font-weight:900;font-size:15px;color:#ffc632;margin-bottom:4px">Compte de paris privé</div>
+                <div style="font-size:12px;line-height:1.55;color:var(--txt2)">Accès direct aux meilleurs sites de paris asiatiques, notamment ceux proposant des limites élevées.</div>
               </div>
             </div>
-          </sc-for>
+          <div data-tilt="" style="padding:18px 17px;border-radius:14px;background:var(--panel);border:1px solid var(--line)">
+              <div style="width:36px;height:36px;border-radius:9px;background:radial-gradient(120% 140% at 15% 0%,#0d3a12,#05130a 70%);display:grid;place-items:center;margin-bottom:12px">
+                <img src="assets/ic-sports.png" alt="" style="width:18px;height:18px;object-fit:contain;filter:invert(1) brightness(1.4)">
+              </div>
+              <div data-tilt-body="">
+                <div style="font-family:var(--font-display);font-weight:900;font-size:15px;color:var(--up);margin-bottom:4px">Paris sportifs</div>
+                <div style="font-size:12px;line-height:1.55;color:var(--txt2)">Football, basket-ball, tennis et bien plus encore: sur notre plateforme de paris sportifs.</div>
+              </div>
+            </div>
+          <div data-tilt="" style="padding:18px 17px;border-radius:14px;background:var(--panel);border:1px solid var(--line)">
+              <div style="width:36px;height:36px;border-radius:9px;background:radial-gradient(120% 140% at 15% 0%,#5c1038,#230616 70%);display:grid;place-items:center;margin-bottom:12px">
+                <img src="assets/ic-casino.png" alt="" style="width:18px;height:18px;object-fit:contain;filter:invert(1) brightness(1.4)">
+              </div>
+              <div data-tilt-body="">
+                <div style="font-family:var(--font-display);font-weight:900;font-size:15px;color:#ff1560;margin-bottom:4px">Jeux</div>
+                <div style="font-size:12px;line-height:1.55;color:var(--txt2)">Les machines à sous sont déjà disponibles; les jeux avec croupiers en direct le seront très bientôt.</div>
+              </div>
+            </div>
         </div>
       </section>
       </div>
@@ -411,16 +659,21 @@ a:hover{color:var(--red2)}
           <div style="font-family:var(--font-tech);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);font-weight:600">Un seul solde · routage au meilleur prix</div>
         </div>
         <div data-grid="books" style="display:flex;gap:12px;flex-wrap:wrap">
-          <sc-for list="{{ books }}" as="b" hint-placeholder-count="5">
-            <a href="{{ b.href }}" title="{{ b.name }}" style="flex:1 1 150px;display:grid;place-items:center;height:74px;padding:12px 18px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease,background .18s ease;text-decoration:none" style-hover="border-color:var(--red);background:var(--panel2)">
-              <sc-if value="{{ b.hasLogo }}" hint-placeholder-val="{{ false }}">
-                <img src="{{ b.grey }}" alt="{{ b.name }}" style="width:100%;height:36px;object-fit:contain;filter:{{ markFilter }};transition:filter .18s ease" style-hover="{{ markHover }}">
-              </sc-if>
-              <sc-if value="{{ b.noLogo }}">
-                <span style="font-family:var(--font-display);font-weight:700;font-size:15px;letter-spacing:.02em;color:var(--txt)">{{ b.name }}</span>
-              </sc-if>
+          <a href="/bookmakers/" title="Polymarket" style="flex:1 1 150px;display:grid;place-items:center;height:74px;padding:12px 18px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease,background .18s ease;text-decoration:none" style-hover="border-color:var(--red);background:var(--panel2)">
+              <img src="assets/logos/bk-pmk-g.png" alt="Polymarket" style="width:100%;height:36px;object-fit:contain;filter:{{ markFilter }};transition:filter .18s ease" style-hover="{{ markHover }}">
             </a>
-          </sc-for>
+          <a href="/bookmakers/" title="PS3838" style="flex:1 1 150px;display:grid;place-items:center;height:74px;padding:12px 18px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease,background .18s ease;text-decoration:none" style-hover="border-color:var(--red);background:var(--panel2)">
+              <img src="assets/logos/bk-p38-g.png" alt="PS3838" style="width:100%;height:36px;object-fit:contain;filter:{{ markFilter }};transition:filter .18s ease" style-hover="{{ markHover }}">
+            </a>
+          <a href="/bookmakers/" title="SBOBet" style="flex:1 1 150px;display:grid;place-items:center;height:74px;padding:12px 18px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease,background .18s ease;text-decoration:none" style-hover="border-color:var(--red);background:var(--panel2)">
+              <img src="assets/logos/bk-sbo-g.png" alt="SBOBet" style="width:100%;height:36px;object-fit:contain;filter:{{ markFilter }};transition:filter .18s ease" style-hover="{{ markHover }}">
+            </a>
+          <a href="/bookmakers/" title="SingBet" style="flex:1 1 150px;display:grid;place-items:center;height:74px;padding:12px 18px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease,background .18s ease;text-decoration:none" style-hover="border-color:var(--red);background:var(--panel2)">
+              <img src="assets/logos/bk-sng-g.png" alt="SingBet" style="width:100%;height:36px;object-fit:contain;filter:{{ markFilter }};transition:filter .18s ease" style-hover="{{ markHover }}">
+            </a>
+          <a href="/bookmakers/" title="OrbitX" style="flex:1 1 150px;display:grid;place-items:center;height:74px;padding:12px 18px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease,background .18s ease;text-decoration:none" style-hover="border-color:var(--red);background:var(--panel2)">
+              <img src="assets/logos/bk-orb-g.svg" alt="OrbitX" style="width:100%;height:36px;object-fit:contain;filter:{{ markFilter }};transition:filter .18s ease" style-hover="{{ markHover }}">
+            </a>
         </div>
         <p style="font-size:12px;line-height:1.65;color:#5f6b78;margin:18px 0 0">VOdds centralise l'accès aux meilleures opportunités de pari en comparant en temps réel les cotes, les limites et les marchés disponibles. La plateforme regroupe des bookmakers sharp aux marges ultra-réduites (~2 %) et à des plafonds élevés, des spécialistes du handicap asiatique permettant de supprimer le risque de nul, ainsi qu'une couverture étendue des ligues secondaires (+1 500 championnats). Elle intègre également les fonctionnalités de betting exchange pour le trading de cotes (back/lay) via la liquidité des exchanges, ainsi que l'accès aux contrats sur des marchés prédictifs basés sur la blockchain pour les événements sportifs.</p>
         <a href="/bookmakers/" style="display:inline-block;margin-top:12px;background:none;border:0;color:var(--red);font-size:12.5px;font-weight:700;letter-spacing:.03em;cursor:pointer;font-family:var(--font-body);padding:0;text-decoration:none" style-hover="color:var(--red2)">Voir tous les bookmakers asiatiques →</a>
@@ -671,17 +924,42 @@ a:hover{color:var(--red2)}
         </div>
 
         <div data-steps="" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:960px;margin:0 auto;position:relative;z-index:1">
-          <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
-            <div style="padding:18px 16px;border-radius:13px;background:var(--panel);border:1px solid var(--line)">
+          <div style="padding:18px 16px;border-radius:13px;background:var(--panel);border:1px solid var(--line)">
               <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(145deg,var(--red) 10%,var(--red2) 90%);display:grid;place-items:center;margin-bottom:14px;box-shadow:0 8px 18px rgba(255,80,20,.3),inset 0 2px 4px rgba(255,255,255,.28);position:relative;overflow:hidden">
                 <div style="position:absolute;top:-8px;left:-6px;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(6px)"></div>
-                <img src="{{ s.icon }}" alt="" style="width:20px;height:20px;object-fit:contain;position:relative;z-index:1">
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%226.5%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222.2%22%2F%3E%3Cpath%20d%3D%22M3%2010.2h18%22%2F%3E%3Ccircle%20cx%3D%2216.3%22%20cy%3D%2214.3%22%20r%3D%221%22%20fill%3D%22%23ffffff%22%20stroke%3D%22none%22%2F%3E%3C%2Fsvg%3E" alt="" style="width:20px;height:20px;object-fit:contain;position:relative;z-index:1">
               </div>
-              <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10px;font-weight:700;color:var(--red);letter-spacing:.08em;margin-bottom:5px">ÉTAPE {{ s.n }}</div>
-              <div style="font-size:14px;font-weight:800;color:var(--txt);margin-bottom:5px">{{ s.t }}</div>
-              <div style="font-size:12px;line-height:1.5;color:var(--txt2)">{{ s.d }}</div>
+              <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10px;font-weight:700;color:var(--red);letter-spacing:.08em;margin-bottom:5px">ÉTAPE 01</div>
+              <div style="font-size:14px;font-weight:800;color:var(--txt);margin-bottom:5px">Inscrivez-vous et créditez votre compte</div>
+              <div style="font-size:12px;line-height:1.5;color:var(--txt2)">Créez un compte et rechargez votre solde à l'aide d'une carte bancaire ou de cryptomonnaies. Les recharges par carte sont effectuées instantanément, tandis que les dépôts en cryptomonnaies sont crédités en quelques minutes.</div>
             </div>
-          </sc-for>
+          <div style="padding:18px 16px;border-radius:13px;background:var(--panel);border:1px solid var(--line)">
+              <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(145deg,var(--red) 10%,var(--red2) 90%);display:grid;place-items:center;margin-bottom:14px;box-shadow:0 8px 18px rgba(255,80,20,.3),inset 0 2px 4px rgba(255,255,255,.28);position:relative;overflow:hidden">
+                <div style="position:absolute;top:-8px;left:-6px;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(6px)"></div>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%225%22%20width%3D%2218%22%20height%3D%2214%22%20rx%3D%223%22%2F%3E%3Cpath%20d%3D%22M7%209v6M10.5%2011v2M14%208.5v7M17.5%2011v2%22%2F%3E%3C%2Fsvg%3E" alt="" style="width:20px;height:20px;object-fit:contain;position:relative;z-index:1">
+              </div>
+              <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10px;font-weight:700;color:var(--red);letter-spacing:.08em;margin-bottom:5px">ÉTAPE 02</div>
+              <div style="font-size:14px;font-weight:800;color:var(--txt);margin-bottom:5px">Comparez les prix en direct</div>
+              <div style="font-size:12px;line-height:1.5;color:var(--txt2)">Le tableau des cotes présente côte à côte les offres de tous les bookmakers connectés, ce qui permet de trouver instantanément la meilleure option.</div>
+            </div>
+          <div style="padding:18px 16px;border-radius:13px;background:var(--panel);border:1px solid var(--line)">
+              <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(145deg,var(--red) 10%,var(--red2) 90%);display:grid;place-items:center;margin-bottom:14px;box-shadow:0 8px 18px rgba(255,80,20,.3),inset 0 2px 4px rgba(255,255,255,.28);position:relative;overflow:hidden">
+                <div style="position:absolute;top:-8px;left:-6px;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(6px)"></div>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%208.2A2%202%200%200%201%206%206.2h12a2%202%200%200%201%202%202v2a1.6%201.6%200%200%200%200%203.2v2a2%202%200%200%201-2%202H6a2%202%200%200%201-2-2v-2a1.6%201.6%200%200%200%200-3.2Z%22%2F%3E%3Cpath%20d%3D%22m9%2012%202%202%204-4.3%22%2F%3E%3C%2Fsvg%3E" alt="" style="width:20px;height:20px;object-fit:contain;position:relative;z-index:1">
+              </div>
+              <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10px;font-weight:700;color:var(--red);letter-spacing:.08em;margin-bottom:5px">ÉTAPE 03</div>
+              <div style="font-size:14px;font-weight:800;color:var(--txt);margin-bottom:5px">Placez un seul pari</div>
+              <div style="font-size:12px;line-height:1.5;color:var(--txt2)">Choisissez les meilleures cotes et validez votre pari avec votre solde VOdds. Il n'est pas nécessaire de vous connecter séparément ni de transférer des fonds d'une application à l'autre.</div>
+            </div>
+          <div style="padding:18px 16px;border-radius:13px;background:var(--panel);border:1px solid var(--line)">
+              <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(145deg,var(--red) 10%,var(--red2) 90%);display:grid;place-items:center;margin-bottom:14px;box-shadow:0 8px 18px rgba(255,80,20,.3),inset 0 2px 4px rgba(255,255,255,.28);position:relative;overflow:hidden">
+                <div style="position:absolute;top:-8px;left:-6px;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(6px)"></div>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2012h4l3-5h6%22%2F%3E%3Cpath%20d%3D%22M4%2012h4l3%205h6%22%2F%3E%3Cpath%20d%3D%22m15%205%202.5%202L15%209M15%2019l2.5-2L15%2015%22%2F%3E%3C%2Fsvg%3E" alt="" style="width:20px;height:20px;object-fit:contain;position:relative;z-index:1">
+              </div>
+              <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10px;font-weight:700;color:var(--red);letter-spacing:.08em;margin-bottom:5px">ÉTAPE 04</div>
+              <div style="font-size:14px;font-weight:800;color:var(--txt);margin-bottom:5px">Nous l'acheminons pour vous</div>
+              <div style="font-size:12px;line-height:1.5;color:var(--txt2)">Votre pari est automatiquement acheminé vers le bookmaker proposant la meilleure cote ; si nécessaire, le montant du pari est réparti entre plusieurs opérateurs afin de garantir qu'il soit intégralement pris en compte.</div>
+            </div>
         </div>
       </section>
 
@@ -692,12 +970,94 @@ a:hover{color:var(--red2)}
         </div>
         <div data-marquee-wrap="" style="overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);margin-bottom:14px">
           <div data-marquee="" style="display:flex;gap:10px;width:max-content">
-            <sc-for list="{{ payMarquee }}" as="p" hint-placeholder-count="22">
-              <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
-                <sc-if value="{{ p.grey }}" hint-placeholder-val="{{ false }}"><img src="{{ p.grey }}" alt="{{ p.n }}" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9"></sc-if>
-                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">{{ p.t }}</div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-vm-g.png" alt="Visa · Mastercard" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">Instantané</div>
               </div>
-            </sc-for>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-btc-g.png" alt="Bitcoin BTC" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">5–10 min</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-usdt-g.png" alt="Tether USDT" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">5–10 min</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-eth-g.png" alt="Ethereum ETH" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">1–5 min</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-usdc-g.png" alt="USD Coin USDC" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">1–5 min</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-trx-g.png" alt="TRON TRX" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">1–5 min</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-bw-g.png" alt="Virement bancaire" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">1 à 5 jours ouvrés</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-jet-g.png" alt="Jetonbank" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">Instantané</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-payz-g.png" alt="Payz" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">Instantané</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-skr-g.png" alt="Skrill" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">Instantané</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-net-g.png" alt="Neteller" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">Instantané</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-vm-g.png" alt="Visa · Mastercard" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">Instantané</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-btc-g.png" alt="Bitcoin BTC" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">5–10 min</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-usdt-g.png" alt="Tether USDT" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">5–10 min</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-eth-g.png" alt="Ethereum ETH" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">1–5 min</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-usdc-g.png" alt="USD Coin USDC" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">1–5 min</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-trx-g.png" alt="TRON TRX" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">1–5 min</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-bw-g.png" alt="Virement bancaire" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">1 à 5 jours ouvrés</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-jet-g.png" alt="Jetonbank" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">Instantané</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-payz-g.png" alt="Payz" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">Instantané</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-skr-g.png" alt="Skrill" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">Instantané</div>
+              </div>
+            <div style="flex:0 0 150px;display:grid;gap:11px;padding:16px 15px;border-radius:11px;background:var(--panel);border:1px solid var(--line);transition:border-color .18s ease" style-hover="border-color:var(--orange)">
+                <img src="assets/logos/pay-net-g.png" alt="Neteller" style="height:24px;width:100%;object-fit:contain;object-position:left;filter:{{ markFilter }};opacity:.9">
+                <div style="font-family:var(--font-tech);font-variant-numeric:tabular-nums;font-size:10.5px;letter-spacing:.06em;color:var(--orange);font-weight:600;text-transform:uppercase">Instantané</div>
+              </div>
           </div>
         </div>
         <div style="max-width:1160px;margin:0 auto"><a href="/paiements/" style="background:none;border:0;color:var(--red);font-size:12.5px;font-weight:700;letter-spacing:.03em;cursor:pointer;font-family:var(--font-body);padding:0;text-decoration:none" style-hover="color:var(--red2)">Voir tous les moyens de paiement →</a></div>
@@ -710,18 +1070,56 @@ a:hover{color:var(--red2)}
           <p style="font-size:13.5px;line-height:1.6;color:var(--txt2);margin:0">Vérifier les cotes de chaque site de paris séparément est une perte de temps et d'argent. Tout change lorsque toutes ces informations sont regroupées sur un seul site.</p>
         </div>
         <div data-bento="" ref="{{ bentoRef }}" style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;max-width:840px;margin:0 auto 44px;position:relative;z-index:1">
-          <sc-for list="{{ features }}" as="fe" hint-placeholder-count="5">
-            <div data-tilt="" style="grid-column:{{ fe.span }};padding:20px 19px;border-radius:15px;background:var(--panel);border:1px solid var(--line);opacity:{{ fe.op }};transform:translateY({{ fe.ty }});transition:opacity .5s ease,transform .5s ease;transition-delay:{{ fe.delayMs }}">
+          <div data-tilt="" style="grid-column:span 2;padding:20px 19px;border-radius:15px;background:var(--panel);border:1px solid var(--line)">
               <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(145deg,var(--red) 10%,var(--red2) 90%);display:grid;place-items:center;margin-bottom:16px;box-shadow:0 10px 22px rgba(255,80,20,.35),inset 0 2px 5px rgba(255,255,255,.3);position:relative;overflow:hidden">
                 <div style="position:absolute;top:-8px;left:-6px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(7px)"></div>
-                <img src="{{ fe.icon }}" alt="" style="width:24px;height:24px;object-fit:contain;position:relative;z-index:1">
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%228.2%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%224.3%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%220.6%22%20fill%3D%22%23ffffff%22%2F%3E%3C%2Fsvg%3E" alt="" style="width:24px;height:24px;object-fit:contain;position:relative;z-index:1">
               </div>
               <div data-tilt-body="">
-                <div style="font-size:14.5px;font-weight:800;color:var(--txt);margin-bottom:5px">{{ fe.t }}</div>
-                <div style="font-size:12px;line-height:1.5;color:var(--txt2);max-width:34ch">{{ fe.d }}</div>
+                <div style="font-size:14.5px;font-weight:800;color:var(--txt);margin-bottom:5px">De meilleures cotes, à chaque pari</div>
+                <div style="font-size:12px;line-height:1.5;color:var(--txt2);max-width:34ch">Les cotes sont comparées en temps réel entre tous les bookmakers connectés, ce qui vous permet de choisir l'option offrant le gain le plus élevé.</div>
               </div>
             </div>
-          </sc-for>
+          <div data-tilt="" style="grid-column:span 2;padding:20px 19px;border-radius:15px;background:var(--panel);border:1px solid var(--line)">
+              <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(145deg,var(--red) 10%,var(--red2) 90%);display:grid;place-items:center;margin-bottom:16px;box-shadow:0 10px 22px rgba(255,80,20,.35),inset 0 2px 5px rgba(255,255,255,.3);position:relative;overflow:hidden">
+                <div style="position:absolute;top:-8px;left:-6px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(7px)"></div>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6.5%208.5a7.8%207.8%200%200%200%200%207M17.5%208.5a7.8%207.8%200%200%201%200%207M9.3%2010.7a3.4%203.4%200%200%200%200%202.6M14.7%2010.7a3.4%203.4%200%200%201%200%202.6%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%221.1%22%20fill%3D%22%23ffffff%22%2F%3E%3C%2Fsvg%3E" alt="" style="width:24px;height:24px;object-fit:contain;position:relative;z-index:1">
+              </div>
+              <div data-tilt-body="">
+                <div style="font-size:14.5px;font-weight:800;color:var(--txt);margin-bottom:5px">Cotes en direct, toutes sources</div>
+                <div style="font-size:12px;line-height:1.5;color:var(--txt2);max-width:34ch">Les cotes sont mises à jour en temps réel par tous les bookmakers connectés : vous verrez les données les plus récentes.</div>
+              </div>
+            </div>
+          <div data-tilt="" style="grid-column:span 2;padding:20px 19px;border-radius:15px;background:var(--panel);border:1px solid var(--line)">
+              <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(145deg,var(--red) 10%,var(--red2) 90%);display:grid;place-items:center;margin-bottom:16px;box-shadow:0 10px 22px rgba(255,80,20,.35),inset 0 2px 5px rgba(255,255,255,.3);position:relative;overflow:hidden">
+                <div style="position:absolute;top:-8px;left:-6px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(7px)"></div>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%2010.5a6%206%200%200%201%2012%200c0%203%201%204.4%201.6%205.2H4.4C5%2014.9%206%2013.5%206%2010.5Z%22%2F%3E%3Cpath%20d%3D%22M10%2018.5a2%202%200%200%200%204%200%22%2F%3E%3C%2Fsvg%3E" alt="" style="width:24px;height:24px;object-fit:contain;position:relative;z-index:1">
+              </div>
+              <div data-tilt-body="">
+                <div style="font-size:14.5px;font-weight:800;color:var(--txt);margin-bottom:5px">Alertes de variation de cotes</div>
+                <div style="font-size:12px;line-height:1.5;color:var(--txt2);max-width:34ch">Recevez des notifications dès que le prix commence à fluctuer, afin de pouvoir réagir avant qu'il ne se stabilise.</div>
+              </div>
+            </div>
+          <div data-tilt="" style="grid-column:span 3;padding:20px 19px;border-radius:15px;background:var(--panel);border:1px solid var(--line)">
+              <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(145deg,var(--red) 10%,var(--red2) 90%);display:grid;place-items:center;margin-bottom:16px;box-shadow:0 10px 22px rgba(255,80,20,.35),inset 0 2px 5px rgba(255,255,255,.3);position:relative;overflow:hidden">
+                <div style="position:absolute;top:-8px;left:-6px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(7px)"></div>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223.5%22%20y%3D%223.5%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221.4%22%2F%3E%3Crect%20x%3D%2213.5%22%20y%3D%223.5%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221.4%22%2F%3E%3Crect%20x%3D%223.5%22%20y%3D%2213.5%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221.4%22%2F%3E%3Crect%20x%3D%2213.5%22%20y%3D%2213.5%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221.4%22%2F%3E%3C%2Fsvg%3E" alt="" style="width:24px;height:24px;object-fit:contain;position:relative;z-index:1">
+              </div>
+              <div data-tilt-body="">
+                <div style="font-size:14.5px;font-weight:800;color:var(--txt);margin-bottom:5px">Tous les sports, un seul écran</div>
+                <div style="font-size:12px;line-height:1.5;color:var(--txt2);max-width:34ch">Football, basket-ball, tennis et bien plus encore : tout cela comparé dans un seul et même récapitulatif simple.</div>
+              </div>
+            </div>
+          <div data-tilt="" style="grid-column:span 3;padding:20px 19px;border-radius:15px;background:var(--panel);border:1px solid var(--line)">
+              <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(145deg,var(--red) 10%,var(--red2) 90%);display:grid;place-items:center;margin-bottom:16px;box-shadow:0 10px 22px rgba(255,80,20,.35),inset 0 2px 5px rgba(255,255,255,.3);position:relative;overflow:hidden">
+                <div style="position:absolute;top:-8px;left:-6px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(7px)"></div>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203.5%204%208l8%204.5%208-4.5-8-4.5Z%22%2F%3E%3Cpath%20d%3D%22M4%2012l8%204.5%208-4.5M4%2016l8%204.5%208-4.5%22%2F%3E%3C%2Fsvg%3E" alt="" style="width:24px;height:24px;object-fit:contain;position:relative;z-index:1">
+              </div>
+              <div data-tilt-body="">
+                <div style="font-size:14.5px;font-weight:800;color:var(--txt);margin-bottom:5px">La possibilité de placer des paris plus élevés</div>
+                <div style="font-size:12px;line-height:1.5;color:var(--txt2);max-width:34ch">L'accès aux services de plusieurs sites de paris vous permet de placer des paris plus élevés sans que cela n'entraîne une variation des cotes en votre défaveur.</div>
+              </div>
+            </div>
         </div>
 
         <div style="max-width:760px;margin:0 auto;position:relative;z-index:1">
@@ -733,17 +1131,18 @@ a:hover{color:var(--red2)}
               <div style="padding:22px 24px 24px;border-right:1px solid var(--line)">
                 <div style="font-size:10px;letter-spacing:.1em;font-weight:800;color:var(--txt3);text-transform:uppercase;margin-bottom:14px">😩 La méthode habituelle</div>
                 <div style="display:grid;gap:11px">
-                  <sc-for list="{{ usualWay }}" as="u" hint-placeholder-count="4">
-                    <div style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;background:var(--panel3);color:var(--txt3);font-size:10px;font-weight:800;display:grid;place-items:center;flex:none">✕</span><span style="font-size:12.5px;color:var(--txt2)">{{ u }}</span></div>
-                  </sc-for>
+                  <div style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;background:var(--panel3);color:var(--txt3);font-size:10px;font-weight:800;display:grid;place-items:center;flex:none">✕</span><span style="font-size:12.5px;color:var(--txt2)">Demander l'accès à chaque fournisseur</span></div>
+                  <div style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;background:var(--panel3);color:var(--txt3);font-size:10px;font-weight:800;display:grid;place-items:center;flex:none">✕</span><span style="font-size:12.5px;color:var(--txt2)">Attendre d'être approuvé, un par un</span></div>
+                  <div style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;background:var(--panel3);color:var(--txt3);font-size:10px;font-weight:800;display:grid;place-items:center;flex:none">✕</span><span style="font-size:12.5px;color:var(--txt2)">Vérifier à nouveau son identité pour chacun</span></div>
+                  <div style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;background:var(--panel3);color:var(--txt3);font-size:10px;font-weight:800;display:grid;place-items:center;flex:none">✕</span><span style="font-size:12.5px;color:var(--txt2)">Alimenter chaque compte séparément</span></div>
                 </div>
               </div>
               <div style="padding:22px 24px 24px;background:rgba(31,239,26,.06)">
                 <div style="font-size:10px;letter-spacing:.1em;font-weight:800;color:var(--up);text-transform:uppercase;margin-bottom:14px">🙌 La méthode VOdds</div>
                 <div style="display:grid;gap:11px">
-                  <sc-for list="{{ voddsWay }}" as="v" hint-placeholder-count="3">
-                    <div style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;background:var(--up);color:#04210b;font-size:10px;font-weight:900;display:grid;place-items:center;flex:none">✓</span><span style="font-size:12.5px;font-weight:700;color:var(--txt)">{{ v }}</span></div>
-                  </sc-for>
+                  <div style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;background:var(--up);color:#04210b;font-size:10px;font-weight:900;display:grid;place-items:center;flex:none">✓</span><span style="font-size:12.5px;font-weight:700;color:var(--txt)">S'inscrire une seule fois avec VOdds</span></div>
+                  <div style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;background:var(--up);color:#04210b;font-size:10px;font-weight:900;display:grid;place-items:center;flex:none">✓</span><span style="font-size:12.5px;font-weight:700;color:var(--txt)">Alimenter un seul solde</span></div>
+                  <div style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;background:var(--up);color:#04210b;font-size:10px;font-weight:900;display:grid;place-items:center;flex:none">✓</span><span style="font-size:12.5px;font-weight:700;color:var(--txt)">Parier immédiatement auprès de tous les fournisseurs connectés</span></div>
                 </div>
               </div>
             </div>
@@ -776,18 +1175,36 @@ a:hover{color:var(--red2)}
           <p style="font-size:13.5px;line-height:1.6;color:var(--txt2);margin:0">De vrais avis, de vrais soldes.</p>
         </div>
         <div data-testigrid="" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative;z-index:1;max-width:1160px;margin:0 auto">
-          <sc-for list="{{ testimonials }}" as="tm" hint-placeholder-count="3">
-            <div style="padding:20px 19px;border-radius:15px;background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px">
-              <div style="font-size:13px;line-height:1.6;color:var(--txt);flex:1">"{{ tm.quote }}"</div>
+          <div style="padding:20px 19px;border-radius:15px;background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px">
+              <div style="font-size:13px;line-height:1.6;color:var(--txt);flex:1">"J'ai arrêté de vérifier trois applications avant chaque pari. Un seul solde, le meilleur prix affiché automatiquement."</div>
               <div style="display:flex;align-items:center;gap:10px">
-                <span style="width:34px;height:34px;border-radius:50%;background:{{ tm.avatarBg }};color:#04100a;font-family:var(--font-display);font-weight:900;font-size:13px;display:grid;place-items:center;flex:none">{{ tm.initials }}</span>
+                <span style="width:34px;height:34px;border-radius:50%;background:var(--best);color:#04100a;font-family:var(--font-display);font-weight:900;font-size:13px;display:grid;place-items:center;flex:none">MT</span>
                 <div style="display:grid;gap:1px">
-                  <div style="font-size:12.5px;font-weight:800;color:var(--txt)">{{ tm.name }}</div>
-                  <div style="font-family:var(--font-tech);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--txt3)">{{ tm.role }}</div>
+                  <div style="font-size:12.5px;font-weight:800;color:var(--txt)">Marcus T.</div>
+                  <div style="font-family:var(--font-tech);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--txt3)">Parieur football</div>
                 </div>
               </div>
             </div>
-          </sc-for>
+          <div style="padding:20px 19px;border-radius:15px;background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px">
+              <div style="font-size:13px;line-height:1.6;color:var(--txt);flex:1">"Le routage entre bookmakers quand l'un ne peut pas prendre toute la mise, c'est la fonctionnalité dont je ne savais pas avoir besoin."</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <span style="width:34px;height:34px;border-radius:50%;background:var(--up);color:#04100a;font-family:var(--font-display);font-weight:900;font-size:13px;display:grid;place-items:center;flex:none">PS</span>
+                <div style="display:grid;gap:1px">
+                  <div style="font-size:12.5px;font-weight:800;color:var(--txt)">Priya S.</div>
+                  <div style="font-family:var(--font-tech);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--txt3)">Parieuse basketball</div>
+                </div>
+              </div>
+            </div>
+          <div style="padding:20px 19px;border-radius:15px;background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px">
+              <div style="font-size:13px;line-height:1.6;color:var(--txt);flex:1">"Alimenter en USDT et voir les fonds arriver en quelques minutes, puis parier tout de suite, c'est comme ça que ça devrait fonctionner."</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <span style="width:34px;height:34px;border-radius:50%;background:var(--red);color:#04100a;font-family:var(--font-display);font-weight:900;font-size:13px;display:grid;place-items:center;flex:none">DK</span>
+                <div style="display:grid;gap:1px">
+                  <div style="font-size:12.5px;font-weight:800;color:var(--txt)">Daniel K.</div>
+                  <div style="font-family:var(--font-tech);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--txt3)">Parieur tennis</div>
+                </div>
+              </div>
+            </div>
         </div>
       </section>
 
@@ -795,12 +1212,34 @@ a:hover{color:var(--red2)}
         <div style="max-width:860px">
           <h2 data-sech="" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:24px;letter-spacing:.01em;margin:0 0 20px" id="s-faq">FAQ</h2>
           <div style="display:grid;gap:1px;background:var(--line);border-radius:12px;overflow:hidden">
-            <sc-for list="{{ faq }}" as="f" hint-placeholder-count="6">
-              <div style="padding:18px 20px;background:var(--panel)">
-                <div style="font-size:13.5px;font-weight:800;margin-bottom:6px;color:var(--txt)">{{ f.q }}</div>
-                <div style="font-size:12.5px;line-height:1.55;color:var(--txt2)">{{ f.a }}</div>
+            <div style="padding:18px 20px;background:var(--panel)">
+                <div style="font-size:13.5px;font-weight:800;margin-bottom:6px;color:var(--txt)">VOdds est-il un bookmaker ?</div>
+                <div style="font-size:12.5px;line-height:1.55;color:var(--txt2)">Non. VOdds est un courtier en paris et une plateforme de comparaison de cotes. Nous conservons votre solde et envoyons votre pari au bookmaker ou à la plateforme d'échange proposant le meilleur prix. Nous ne fixons pas les cotes nous-mêmes.</div>
               </div>
-            </sc-for>
+            <div style="padding:18px 20px;background:var(--panel)">
+                <div style="font-size:13.5px;font-weight:800;margin-bottom:6px;color:var(--txt)">Ai-je besoin d'un compte séparé chez chaque bookmaker ?</div>
+                <div style="font-size:12.5px;line-height:1.55;color:var(--txt2)">Non. Vous vous inscrivez une seule fois auprès de VOdds et alimentez un seul solde. Vous pouvez commencer à parier immédiatement auprès de tous les bookmakers connectés, sans inscription ni processus d'approbation séparé ailleurs.</div>
+              </div>
+            <div style="padding:18px 20px;background:var(--panel)">
+                <div style="font-size:13.5px;font-weight:800;margin-bottom:6px;color:var(--txt)">Comment fonctionne le routage ?</div>
+                <div style="font-size:12.5px;line-height:1.55;color:var(--txt2)">VOdds compare les prix de tous les bookmakers et plateformes d'échange connectés. Lorsque vous placez un pari, il est envoyé à celui qui propose le meilleur prix. Si ce fournisseur ne peut pas prendre la mise complète, le reste est réparti entre les prochains meilleurs prix.</div>
+              </div>
+            <div style="padding:18px 20px;background:var(--panel)">
+                <div style="font-size:13.5px;font-weight:800;margin-bottom:6px;color:var(--txt)">Combien ça coûte ?</div>
+                <div style="font-size:12.5px;line-height:1.55;color:var(--txt2)">Il n'y a pas d'abonnement. Les détails tarifaires sont affichés sur le ticket de pari avant que vous confirmiez un pari.</div>
+              </div>
+            <div style="padding:18px 20px;background:var(--panel)">
+                <div style="font-size:13.5px;font-weight:800;margin-bottom:6px;color:var(--txt)">Comment alimenter le compte ?</div>
+                <div style="font-size:12.5px;line-height:1.55;color:var(--txt2)">Visa et Mastercard sont instantanés. Tether, Bitcoin, Ethereum, USD Coin et TRON sont crédités en 1 à 10 minutes. Le virement bancaire prend 1 à 5 jours ouvrés, et Jetonbank, Payz, Skrill et Neteller sont instantanés.</div>
+              </div>
+            <div style="padding:18px 20px;background:var(--panel)">
+                <div style="font-size:13.5px;font-weight:800;margin-bottom:6px;color:var(--txt)">Où VOdds est-il disponible ?</div>
+                <div style="font-size:12.5px;line-height:1.55;color:var(--txt2)">Dans la plupart des marchés. Non disponible aux États-Unis, à Singapour, au Vietnam ou aux Philippines.</div>
+              </div>
+            <div style="padding:18px 20px;background:var(--panel)">
+                <div style="font-size:13.5px;font-weight:800;margin-bottom:6px;color:var(--txt)">Qui détient la licence de VOdds ?</div>
+                <div style="font-size:12.5px;line-height:1.55;color:var(--txt2)">Ole Group International B.V., enregistrée à Curaçao (société 150383), sous licence du Gaming Control Board n° OGL/2024/1358/1233.</div>
+              </div>
           </div>
         </div>
       </section>
@@ -1231,7 +1670,7 @@ class Component extends DCLogic {
         :s.phase==="click"?"Placement de votre pari…"
         :"Pari placé avec succès",
       books:BOOKS.map(([name,abbr,g],i)=>({name,abbr,grey:g?U(g):"",hasLogo:!!g,noLogo:!g,span:i===0?"1 / -1":"auto",
-        href:{"Polymarket":"./polymarket.html","PS3838":"./ps3838.html","SBOBet":"./sbobet.html","SingBet":"./singbet.html","OrbitX":"./orbitx.html"}[name]||"#"})),
+        href:"/bookmakers/"})),
       booksAside:BOOKS.filter(([name])=>name!=="OrbitX").map(([name,abbr,g])=>({name,abbr,grey:g?U(g):"",hasLogo:!!g,noLogo:!g})),
       booksMarquee:BOOKS.concat(BOOKS).map(([name,abbr,g])=>({name,abbr,grey:U(g)})),
       contactMark:U("ic-livechat"),
