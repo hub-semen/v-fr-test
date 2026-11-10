@@ -32,5 +32,13 @@
   if (document.readyState === 'complete') load();
   else window.addEventListener('load', load);
 
-  window.VoddsLiveChat = { open: open };
+  function isOpen() {
+    return !!document.querySelector('.bx-livechat-wrapper.bx-livechat-show');
+  }
+
+  function close() {
+    if (window.BX && window.BX.LiveChat) window.BX.LiveChat.closeLiveChat();
+  }
+
+  window.VoddsLiveChat = { open: open, close: close, isOpen: isOpen };
 })();

@@ -183,7 +183,7 @@ class Component extends DCLogic {
   renderVals() {
     return {
       chatOpen: this.state.chatOpen,
-      toggleChat: () => this.setState(s => ({ chatOpen: !s.chatOpen })),
+      toggleChat: () => { const lc = window.VoddsLiveChat; if (lc && lc.isOpen()) { lc.close(); this.setState({ chatOpen: false }); return; } this.setState(s => ({ chatOpen: !s.chatOpen })); },
       openLiveChat: () => { this.setState({ chatOpen: false }); window.VoddsLiveChat && window.VoddsLiveChat.open(); },
       menuOpen: this.state.menuOpen,
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen, productsOpen: false, langOpen: false })),

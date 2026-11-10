@@ -1597,7 +1597,7 @@ class Component extends DCLogic {
       hdrLangOpen: this.state.hdrLangOpen,
       hdrToggleLang: () => this.setState(s => ({ hdrLangOpen: !s.hdrLangOpen })),
       hdrChatOpen: this.state.hdrChatOpen,
-      hdrToggleChat: () => this.setState(s => ({ hdrChatOpen: !s.hdrChatOpen })),
+      hdrToggleChat: () => { const lc = window.VoddsLiveChat; if (lc && lc.isOpen()) { lc.close(); this.setState({ hdrChatOpen: false }); return; } this.setState(s => ({ hdrChatOpen: !s.hdrChatOpen })); },
       hdrOpenLiveChat: () => { this.setState({ hdrChatOpen: false }); window.VoddsLiveChat && window.VoddsLiveChat.open(); },
       chatFab:s.chat==="fab", chatTab:s.chat==="tab", chatOpen:s.chat==="open",
       channelsOpen:!!s.channels, toggleChannels:()=>this.setState({channels:!s.channels}),
