@@ -15,21 +15,16 @@ ROOT = Path(__file__).resolve().parent.parent
 FR = "https://vodds.fr/"
 COM = "https://vodds.com/"
 
-# fr slug -> (vodds.com path, set of languages that are noindex on vodds.com)
-# Noindex URLs stay in the map but are not emitted; drop them from the set
-# once vodds.com switches those pages to index.
+# fr slug -> vodds.com path. Pages left out of the map get their block removed.
 CLUSTERS = {
-    "": ("", set()),
-    "bookmakers/": ("bookmakers/", set()),
-    "comparateur-de-cotes/": ("odds-scanner/", set()),
-    "compte-de-paris-prive/": ("direct-sportsbook/", set()),
-    "paris-sportifs/": ("sports/", set()),
-    "paiements/": ("payment-policy/", set()),
-    "promotions/": ("promotions/", set()),
-    "promo-bonus-crypto/": ("promotions/crypto-welcome-offer/", {"es"}),
-    "promo-coupes-uefa-power-play/": ("promotions/vodds-uefa-welcome-bonus/", {"en"}),
-    "contact/": ("contact-us/", set()),
-    "conditions-generales/": ("terms-and-conditions/", set()),
+    "": "",
+    "bookmakers/": "bookmakers/",
+    "comparateur-de-cotes/": "odds-scanner/",
+    "paiements/": "payment-policy/",
+    "promotions/": "promotions/",
+    "contact/": "contact-us/",
+    "conditions-generales/": "terms-and-conditions/",
+    "a-propos/": "about-us/",
 }
 
 START, END = "<!-- hreflang:start -->", "<!-- hreflang:end -->"
@@ -37,12 +32,14 @@ BLOCK_RE = re.compile(re.escape(START) + r".*?" + re.escape(END) + r"\n?", re.S)
 CANONICAL_RE = re.compile(r'^<link rel="canonical"[^>]*>\n', re.M)
 
 
-def build_block(fr_slug, com_path, noindex):
-    alts = [("fr", FR + fr_slug)]
-    urls = {"en": COM + com_path, "es": COM + "es/" + com_path, "ru": COM + "ru/" + com_path}
-    alts += [(lang, url) for lang, url in urls.items() if lang not in noindex]
-    if "en" not in noindex:
-        alts.append(("x-default", urls["en"]))
+def build_block(fr_slug, com_path):
+    alts = [
+        ("fr", FR + fr_slug),
+        ("en", COM + com_path),
+        ("es", COM + "es/" + com_path),
+        ("ru", COM + "ru/" + com_path),
+        ("x-default", COM + com_path),
+    ]
     lines = [f'<link rel="alternate" hreflang="{lang}" href="{url}">' for lang, url in alts]
     return "\n".join([START, *lines, END]) + "\n"
 
@@ -55,8 +52,15 @@ def files_for(fr_slug):
 
 
 def main():
-    for fr_slug, (com_path, noindex) in CLUSTERS.items():
-        block = build_block(fr_slug, com_path, noindex)
+    mapped = {path for fr_slug in CLUSTERS for path in files_for(fr_slug)}
+    for path in sorted({*ROOT.glob("*.html"), *ROOT.glob("*/index.html")} - mapped):
+        html = path.read_text(encoding="utf-8")
+        if START in html:
+            path.write_text(BLOCK_RE.sub("", html), encoding="utf-8")
+            print(f"{path.relative_to(ROOT)}: hreflang removed")
+
+    for fr_slug, com_path in CLUSTERS.items():
+        block = build_block(fr_slug, com_path)
         for path in files_for(fr_slug):
             html = BLOCK_RE.sub("", path.read_text(encoding="utf-8"))
             canonical = CANONICAL_RE.search(html)
