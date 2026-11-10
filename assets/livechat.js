@@ -10,7 +10,12 @@
     if (loaded) return;
     loaded = true;
     var style = document.createElement('style');
-    style.textContent = '.b24-widget-button-wrapper{display:none!important}';
+    // Phones get Bitrix's fullscreen layout (.bx-livechat-mobile); narrow desktop windows get the
+    // fixed 340px popup, so stretch it between the header and the chat button instead.
+    style.textContent = '.b24-widget-button-wrapper{display:none!important}' +
+      '@media (max-width:640px){.bx-livechat-wrapper:not(.bx-livechat-mobile){' +
+      'left:12px!important;right:12px!important;top:66px!important;bottom:140px!important;' +
+      'width:auto!important;height:auto!important}}';
     document.head.appendChild(style);
     var script = document.createElement('script');
     script.async = true;
