@@ -45,5 +45,13 @@
     if (window.BX && window.BX.LiveChat) window.BX.LiveChat.closeLiveChat();
   }
 
+  // Page CTAs marked data-open-livechat open the chat instead of following their fallback href
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('[data-open-livechat]');
+    if (!link) return;
+    e.preventDefault();
+    open();
+  });
+
   window.VoddsLiveChat = { open: open, close: close, isOpen: isOpen };
 })();
