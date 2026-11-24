@@ -175,6 +175,18 @@ a:hover{color:var(--red2)}
 #vof a{text-decoration:none}
 @media (max-width:760px){#vof [data-cols]{grid-template-columns:1fr 1fr!important}}
 @media (max-width:640px){#vof [data-bottom-spacer]{display:block!important}}
+
+  /* Chat widget channels: red glow so Telegram / WhatsApp / Chat en direct stand out */
+  [data-chat-widget] .chat-pill{display:flex;align-items:center;gap:9px;height:40px;padding:0 13px 0 5px;border:1px solid rgba(255,41,41,.6);border-radius:20px;background:linear-gradient(90deg,rgba(255,41,41,.2),#12161c 75%);color:#fff;font-size:12px;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:0 0 16px rgba(255,41,41,.35),0 24px 60px rgba(0,0,0,.6);transition:transform .15s,box-shadow .15s,border-color .15s;animation:chatPillIn .25s ease-out both}
+  [data-chat-widget] .chat-pill:nth-child(2){animation-delay:.05s}
+  [data-chat-widget] .chat-pill:nth-child(3){animation-delay:.1s}
+  [data-chat-widget] .chat-pill:hover{border-color:#ff2929;box-shadow:0 0 26px rgba(255,41,41,.6),0 24px 60px rgba(0,0,0,.6);transform:translateX(-3px)}
+  [data-chat-widget] .chat-pill-ic{width:30px;height:30px;flex:none;border-radius:50%;background:#ff2929;display:grid;place-items:center;box-shadow:0 0 10px rgba(255,41,41,.7)}
+  [data-chat-widget] .chat-pill-ic svg{width:16px;height:16px;display:block}
+  [data-chat-widget] .chat-pill-bolt{width:13px;height:13px;flex:none;color:#ff2929;filter:drop-shadow(0 0 4px rgba(255,41,41,.9));animation:chatBolt 1.4s ease-in-out infinite}
+  @keyframes chatBolt{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.85)}}
+  @keyframes chatPillIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){[data-chat-widget] .chat-pill,[data-chat-widget] .chat-pill-bolt{animation:none}}
 </style>
 </helmet>
 <template id="__bundler_thumbnail" data-bg-color="#07090c">
@@ -313,9 +325,9 @@ a:hover{color:var(--red2)}
     <div data-chat-widget="" style="position:fixed;right:20px;bottom:20px;z-index:70;display:grid;justify-items:end;gap:10px">
       <sc-if value="{{ hdrChatOpen }}">
         <div style="display:grid;gap:8px;justify-items:end">
-          <a href="https://t.me/VoddsSupportBot" target="_blank" style="display:flex;align-items:center;gap:9px;height:38px;padding:0 14px;border:1px solid #232c36;border-radius:19px;background:#12161c;color:#eef2f6;font-size:11.5px;font-weight:700;box-shadow:0 24px 60px rgba(0,0,0,.6)">Telegram</a>
-          <a href="https://api.whatsapp.com/send/?phone=639178372617&amp;text=VOdds+Support&amp;type=phone_number&amp;app_absent=0" target="_blank" style="display:flex;align-items:center;gap:9px;height:38px;padding:0 14px;border:1px solid #232c36;border-radius:19px;background:#12161c;color:#eef2f6;font-size:11.5px;font-weight:700;box-shadow:0 24px 60px rgba(0,0,0,.6)">WhatsApp</a>
-          <button type="button" onClick="{{ hdrOpenLiveChat }}" style="display:flex;align-items:center;gap:9px;height:38px;padding:0 14px;border:1px solid #232c36;border-radius:19px;background:#12161c;color:#eef2f6;font-size:11.5px;font-weight:700;box-shadow:0 24px 60px rgba(0,0,0,.6);cursor:pointer;font-family:inherit">Chat en direct</button>
+          <a href="https://t.me/VoddsSupportBot" target="_blank" class="chat-pill"><span class="chat-pill-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M21.4 3.6 2.9 10.8c-1 .4-1 1.6.1 1.9l4.6 1.5 1.8 5.6c.3.8 1.3 1 1.9.4l2.6-2.5 4.7 3.5c.7.5 1.6.1 1.8-.7l3.1-15.1c.2-1.1-.9-2-1.9-1.6ZM9.6 14.2l8.6-7.7-6.9 9.1-.3 2.9z"/></svg></span>Telegram<svg class="chat-pill-bolt" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2 4 13.6h6.6L9.5 22 20 9.9h-6.7z"/></svg></a>
+          <a href="https://api.whatsapp.com/send/?phone=639178372617&amp;text=VOdds+Support&amp;type=phone_number&amp;app_absent=0" target="_blank" class="chat-pill"><span class="chat-pill-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.6c0 3.6 2.8 6.4 6.4 6.4l1-1.6-2-1-1 .8a4.6 4.6 0 0 1-2.6-2.6l.8-1-1-2z" fill="#fff" stroke-width="1"/></svg></span>WhatsApp<svg class="chat-pill-bolt" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2 4 13.6h6.6L9.5 22 20 9.9h-6.7z"/></svg></a>
+          <button type="button" onClick="{{ hdrOpenLiveChat }}" class="chat-pill"><span class="chat-pill-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.8a7.6 7.6 0 0 1-11.1 6.8L4.5 20l1.4-4.3A7.6 7.6 0 1 1 20.5 11.8z"/><path d="M8.6 11.9h.01M12 11.9h.01M15.4 11.9h.01" stroke-width="2.6"/></svg></span>Chat en direct<svg class="chat-pill-bolt" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 2 4 13.6h6.6L9.5 22 20 9.9h-6.7z"/></svg></button>
         </div>
       </sc-if>
       <button aria-label="Chat en direct" title="Chat en direct" onClick="{{ hdrToggleChat }}" style="width:56px;height:56px;border-radius:50%;background:none;border:0;padding:0;cursor:pointer;display:grid;place-items:center;box-shadow:0 10px 26px rgba(255,41,41,.4)">
